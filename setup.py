@@ -26,8 +26,6 @@ with open(os.path.join(ROOT, "requirements.txt"), encoding='utf8') as fp:
     REQUIRES = [line for line in fp.readlines() if line and '#' not in line]
 
 if __name__ == "__main__":
-    # allow setup.py to run from another directory
-    os.chdir(ROOT)
     setuptools.setup(
         author='Helmut Konrad Fahrendholz',
         author_email='info@checkitweg.de',
@@ -40,10 +38,13 @@ if __name__ == "__main__":
         version=VERSION,
         zip_safe=False,  # create 'zip'-file if True. Don't do it!
         classifiers=[
-            'Programming Language :: Python :: 3.7',
             'Programming Language :: Python :: 3.8',
         ],
         packages=[
             'bibliography',
+            'bibliography.features',
+            'bibliography.layout',
+            'bibliography.machine',
+            'bibliography.reference',
         ],
     )
