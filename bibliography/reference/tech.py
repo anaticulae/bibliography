@@ -22,7 +22,7 @@ import utila
 import bibliography.label
 import bibliography.reference
 import bibliography.reference.freeand
-import detector.quotes
+import bibliography.quotes
 
 
 @functools.lru_cache(maxsize=4096)
@@ -175,7 +175,7 @@ def parse_first(content: str):
     >>> parse_first('HORNIG, Frank (17.7.2006): Du bist das Netz! ')
     ('HORNIG, Frank ', '(17.7.2006): Du bist das Netz! ')
     """
-    authors = detector.quotes.before_first_quote(content, starting=5)
+    authors = bibliography.quotes.before_first_quote(content, starting=5)
     if authors:
         if len(authors) <= content.find(':'):
             # quote starts before first collon

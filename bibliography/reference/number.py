@@ -31,7 +31,7 @@ import german
 import iamraw
 import utila
 
-import detector.quotes
+import bibliography.quotes
 
 
 @functools.lru_cache(maxsize=4096)
@@ -184,7 +184,7 @@ def search_author(raw: str):
     >>> search_author('N. Jakob, S. H. Weber, M. C. Müller, I. Gurevych, „Beyond the stars: exploiting free-text“')
     ([Person(name='Jakob', firstname='N.',...ing free-text“')
     """
-    removed = detector.quotes.before_first_quote(raw)
+    removed = bibliography.quotes.before_first_quote(raw)
     if removed is None:
         return None
     # TODO: HACK Y COLLECTOR

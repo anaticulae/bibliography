@@ -47,4 +47,7 @@ if __name__ == "__main__":
             'bibliography.machine',
             'bibliography.reference',
         ],
+        entry_points={
+            'console_scripts': ['bibliography = bibliography.cli:main',],
+        },
     )
