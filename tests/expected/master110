@@ -1,0 +1,211 @@
+strategy:alternate
+
+W. Abmayr.
+    Einfuhrung in die digitale Bildverarbeitung
+
+M. Baccar L.A. Gee ; R.C. Gonzalez M.A. Abidi.
+    Segmentation of Range Images via Data Fusion and Morphological Watersheds
+
+W. Bailer F. Holler ; A. Messina D. Airola ; P. Schallauer M. Hausenblas.
+    State of the Art of Content Analysis Tools for Video, Audio and Speech
+
+S. Belongie J. Malik J. Puzicha.
+    Shape Matching and Object Recognition Using Shape Contexts
+
+C.M. Bishop.
+    Neural Networks for Pattern Recognition
+
+M. Bober.
+    MPEG-7 Visual Shape Descriptors
+
+M. Brocke.
+    Statistische Ereignisdetektion in Bildfolgen
+
+J. Canny.
+    A Computational Approach to Edge Detection
+
+U. Castellani S. Livatino R.B. Fisher.
+    Improving Enviroment Modelling by Occlusion Surface Completion
+
+F. A. Cheikh.
+    MUVIS: A System for Content-Based Image Retrieval
+
+M.S. Drew T.K. Lee A. Rova.
+    Shape Retrieval with Eigen-CSS Search
+
+T. Fawcett.
+    Roc Graphs: Notes and Practical Considerations for Researchers
+
+R. Ferber.
+    Information Retrieval Suchmodelle und Data-Mining-Verfahren fur Textsammlungen und das Web
+
+P.A. Flach.
+    The Geometry of ROC Space: Understanding Machine Learning Metrics through ROC Isometrics
+
+D. Forsyth ; J. Ponce.
+    Computer Vision
+
+S. Frintrop.
+    Robuste Roboterlokalisierung mit omnidirektionaler Bildsensorik
+
+T. Hanning.
+    Vektorielle Mehrniveaupassung Anwendungen in der Bildsegmentierung
+
+D. He Q. Sun Q. Tian.
+    A Secure and Robust Object-Based Video Authentication System
+
+A. Hoover
+
+
+M.K. Hu.
+    Visual Pattern Recognition by Moment Invariants
+
+M. Huppi ; D. Kuhn.
+    Chromatische Steinklassifizierung
+
+A.C. Jalba
+
+
+X. Jiang.
+    A Adaptive Contour Closure Algorithm and Its Experimental Evaluation
+
+X. Jiang ; H. Bunke.
+    Dreidimensionales Computersehen Gewinnung und Analyse von Tiefenbildern
+
+X. Jiang ; H. Bunke.
+    Edge Detection in Range Images Based on Scan Line Approximation
+
+E. Johnson.
+    Spin-Images: A Representation for 3-D Surface Matching
+
+M. Kass A. Witkin D. Terzopoulos.
+    Snakes: Active Contour Models
+
+A. Khotanzad ; Y.H. Hong.
+    Invariant Image Recognition by Zernike Moments
+
+V. Kindratenko.
+    Development and Application of Image Analysis Techniques for Identification and Classification of Microscopic Particles
+
+S. Lang.
+    Multimodale Aufmerksamkeitssteuerung fur einen mobilen Roboter
+
+A. D. Lattner.
+    Automatische Generierung von Klassifikationsregeln aus Farb-, Textur- und Konturmerkmalen durch Induktives Lernen
+
+B. Leibe G. Hetzel P. Levi.
+    Local Feature Histograms for Object Recognition from Range Images
+
+W. Leupold R.Conrad ; S. Volkel G. Große
+
+
+S.X. Liao.
+    Image Analysis by Moments
+
+M. Martin
+    -Fernandez and C
+
+J. Milgram M. Cheriet R. Sabourin.
+    Estimating accurate multi-class probabilities with support vector machines
+
+N. Milstein.
+    Image Segmantation by adaptive Thresholding
+
+F. Mokhtarian.
+    Silhouette-Based Occluded Object Recognition Through Curvature Scale Space
+
+F. Mokhtarian ; S. Abbasi.
+    Automatic Selection of Optimal Views in Multi-view Object Recognition
+
+F. Mokhtarian S. Abbasi J. Kittler.
+    Robust and Ecient Shape Indexing through Curvature scale space
+
+F. Mokhtarian ; M. Bober.
+    Curvature Scale Space Representation: Theory, Applications, and MPEG-7 Standardization
+
+F. Mokhtarian ; A.K. Mackworth.
+    Scale-Based Description and Recognition of Planar Curves and Two Dimensional Shapes
+
+F. Mokhtarian ; R. Suomela.
+    Robust Image Corner Detection Through Curvature Scale Space
+
+Morphological Filtering for Image Enhancement Feature Extraction. P. maragos. Chapter 3.3 for the Book
+    The Image and Video Processing Handbook, 2nd edition, Edited by A
+
+A. Nuchter H. Surmann J. Hertzberg.
+    Automatic Classification of Objects in 3D Laser Range Scans
+
+A. Nuchter O. Wulf ; K. Lingemann J. Hertzberg ; B. Wagner H. Surmann.
+    3D Mapping with Semantic Knowledge
+
+G. Pignalberi.
+    Tuning Range Image Segmentation by Genetic Algorithm
+
+W.H. Press S.A. Teukolsky ; W.T. Vetterling B.P. Flannery.
+    Numerical Recipes in C: The Art of Sicientific Computing
+
+P. Pudil F.J. Ferri ; J. Novovicova J. Kittler.
+    Floating Search Methods for Feature Selection with Nonmonotonic Criterion Functions
+
+J. Ricard D. Coeurjolly A. Baskurt.
+    Generalization of Angular Radial Transform
+
+M. Safar C. Shahabi X. Sun.
+    Image Retrieval By Shape: A Comparative Study
+
+B. Scholkopf ; A.J. Smola.
+    Learning with Kernels Support Vector Machines, Regularization, Optimization, and Beyond
+
+P. Soille.
+    Morphologische Bildverarbeitung
+
+S.A. Solla ; T.K. Leen
+
+
+R. Steinbrecher.
+    Bildverarbeitung in der Praxis
+
+F. Stulp ; F. Dell
+    ’Acqua, and R
+
+S. Suzuki ; K. Abe.
+    Topological Structural Analysis of Digitized Binary Images by Border Following
+
+M.R. Teague.
+    Image Analysis via the General Theory of Moments
+
+L. Thomas F.B. Sachse C.D. Werner O. Dossel.
+    Topologisch veranderbare dreidimensionale aktive konturen in der medizinischen bildverarbeitung
+
+V. Vapnik.
+    The Nature of Statistical Learning Theory
+
+K. Veropoulos C. Campbell N. Cristianini.
+    Controlling the Sensitivity of Support Vector Machines
+
+P. Viola ; M.J. Jones.
+    Image Analysis via the General Theory of Moments
+
+A. Wallin ; O. Kubler.
+    Complete Sets of Complex Zernike Moment Invariants and the Role of the Pseudoinvariants
+
+H. Wang ; D. Suter.
+    A Model-Based Range Image Segmentation Algorithm Using a Novel Robust Estimator
+
+P. Watanachaturaporn P.K. Varshney M.K. Arora.
+    Evaluation of Factors A ecting Support Vector Machines for Hyperspectral Classification
+
+O. Wulf K. O. Arras ; H. I. Christensen B. A. Wagner.
+    2D Mapping of Cluttered Indoor Environments by Means of 3D Perception
+
+H. G. Yu.
+    Morphlogical Image Segmentation for Co-Aligned Multiple Images using Watersheds Transformation
+
+F. Zernike.
+    Beugungstheorie des Schneideverfahrens und seiner Verbesserten Form der Phasenkontrastmethode
+
+D. Zhang ; G. Lu.
+    Review of Shape Representation and Description Techniques
+
+Y. Zhang ; Y. Sun ; H. Sari
+    -Sarraf, and M

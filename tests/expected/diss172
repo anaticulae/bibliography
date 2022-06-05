@@ -1,0 +1,565 @@
+strategy:alternate
+
+A Practical Observability Primer.
+    uploads / 2018 / 09 / A - Practical - Observability - Primer - 1
+
+Christian Esposito ; Aniello Castiglione ; and Kim-Kwang
+    Raymond Choo
+
+Varun Chandola ; Arindam Banerjee ; and Vipin
+
+
+Nasrin Sultana ; Naveen Chilamkurti ; Wei Peng ; and Rabei
+
+
+Shenglin Zhang ; Ying Liu ; Dan Pei ; Yu Chen ; Xianping Qu ; Shimin Tao
+    and Zhi Zang
+
+Ding Yuan ; Xin Zhuang ; Guilherme Renna Rodrigues ; Xu Zhao ; Yongle Zhang ; Pranay U Jain ; and Michael
+    Yu Luo, , , , , , Stumm
+
+Olivier Crameri ; Nikola Knezevic ; Dejan Kostic ; Ricardo Bianchini ; and Willy
+
+
+S. Nedelkoski ; J. Bogatinovski ; A. Acker ; J. Cardoso ; O. Kao.
+    “Self-Attentive Classification-Based Anomaly Detection in Unstructured Logs
+
+Sasho Nedelkoski ; Jasmin Bogatinovski ; Alexander Acker ; Jorge Cardoso ; and Odej
+
+
+Accelerated Cloud
+
+
+Frank Doelitzscher ; Martin Knahl ; Christoph Reich ; and Nathan
+
+
+o.A.
+    NO TITLE
+
+Haryadi S Gunawi ; Mingzhe Hao ; Tanakorn Leesatapornwongsa ; Tiratat Patana-anake ; Thanh Do ; Jeffry Adityatama ; Kurnia J Eliazar ; Agung Laksono ; Jeffrey F Lukman ; Vincentius Martin
+
+
+Sasho Nedelkoski ; Jorge Cardoso ; and Odej
+
+
+Jonathan Sillito and Esdras Kutomi. Failures and Fixes
+    A Study of Software System Incident Response
+
+C. Sridharan.
+    Distributed Systems Observability: A Guide to Building Robust Systems
+
+Todd D. Jick.
+    “Mixing Qualitative and Quantitative Methods: Triangulation in Action
+
+Sasho Nedelkoski ; Jorge Cardoso ; and Odej
+
+
+Sasho Nedelkoski ; Jasmin Bogatinovski ; Ajay Kumar Mandapati ; Soeren Becker ; Jorge Cardoso ; and Odej
+
+
+Domenico Cotroneo ; Luigi De Simone ; Pietro Liguori ; Roberto Natella ; and Nematollah
+
+
+Jieming Zhu ; Shilin He ; Jinyang Liu ; Zibin Zheng ; and Michael
+    Pinjia He, Qi Xie, , R Lyu
+
+Xu Zhang ; Yong Xu ; Qingwei Lin ; Bo Qiao ; Hongyu Zhang ; Yingnong Dang ; Chunyu Xie ; Xinsheng Yang ; Qian Cheng
+    Ze Li, et al
+
+Weibin Meng ; Ying Liu ; Yichen Zhu ; Shenglin Zhang ; Dan Pei ; Yuqing Liu ; Yihao Chen ; Ruizhi Zhang ; Shimin Tao
+    Pei Sun, et al
+
+Mojtaba Shahin ; Muhammad Ali Babar ; and Liming
+
+
+Geoffrey E Hinton
+    and Ruslan R Salakhutdinov
+
+William C Carter.
+    “A time for reflection
+
+J. C. Laprie.
+    “Dependability: Basic Concepts and Terminology
+
+Ingo Weber ; Chao Li ; Len Bass ; Xiwei Xu ; and Liming
+
+
+Andrew S Tanenbaum Maarten Van Steen. Distributed Systems
+    Principles and Paradigms
+
+Charles Abrams
+
+
+Sam Newman. Building Microservices
+    Designing Fine-Grained Systems
+
+Mohammad Isam Malkawi.
+    “The Art of Software Systems Development: Reliability, Availability, Maintainability, Performance (RAMP)
+
+Florian Schmidt ; Anton Gulenko ; Marcel Wallschläger ; Alexander Acker ; Vincent Hennig ; Feng Liu ; and Odej
+
+
+Jakub Breier
+    and Jana Branisova
+
+Liang Tang ; and Chang-Shing
+    Tao Li, Perng
+
+Feifei Li ; Guineng Zheng ; and Vivek
+    Min Du, , , Srikumar
+
+o.A.
+    NO TITLE
+
+J. Bogatinovski S. Nedelkoski ; J. Cardoso O. Kao.
+    “Self-Supervised Anomaly Detection from Distributed Traces
+
+Yu Chen.
+    “Anomaly Detection on Golden Signals
+
+o.A.
+    NO TITLE
+
+o.A.
+    NO TITLE
+
+Haowen Xu ; Wenxiao Chen ; Nengwen Zhao ; Zeyan Li ; Jiahao Bu ; Zhihan Li ; Ying Liu ; Youjian Zhao ; Dan Pei ; Yang Feng
+
+
+Ahmed E Hassan ; Daryl J Martin ; Parminder Flora ; Paul Mansfield ; and Dave
+
+
+Meiyappan Nagappan ; and Mladen
+    Kesheng Wu, A Vouk
+
+Min Du Feifei Li.
+    “Spell: Streaming Parsing of System Event Logs
+
+Yue Yuan ; Wenchang Shi
+    Bin Liang, and Bo Qin
+
+Xiang Zhou ; Xin Peng ; Chao Ji ; Dewei Liu ; Qilin Xiang ; and Chuan
+    Tao Xie, Jun Sun, , , , He
+
+An Ran Chen.
+    “An Empirical Study on Leveraging Logs for Debugging Production Failures
+
+Yongle Zhang ; Serguei Makarov ; Xiang Ren ; David Lion ; and Ding
+
+
+Xu Zhao ; Kirk Rodrigues ; Ding Yuan ; and Michael
+    Yu Luo, , Stumm
+
+Lingfeng Bao ; Nimrod Busany ; David Lo ; and Shahar
+
+
+Jayashree Mohan ; Ashlie Martinez ; Soujanya Ponnapalli ; Pandian Raju ; and Vijay
+    Chidambaram
+
+Paul Sarbanes
+    and Michael Oxley
+
+Jinyang Liu ; Jieming Zhu ; Shilin He ; Zibin Zheng ; and Michael
+    Pinjia He, , R Lyu
+
+Hossein Hamooni ; Biplob Debnath ; Jianwu Xu ; Hui Zhang ; Guofei Jiang ; and Abdullah
+
+
+o.A.
+    Benjamin H. Sigelman, Luiz Andre Barroso, Mike Burrows, Pat Stephenson, Manoj Plakal, Donald Beaver, Saul Jaspan, and Chandan Shanbhag. Dapper, a Large
+
+o.A.
+    NO TITLE
+
+o.A.
+    NO TITLE
+
+IDC FutureScape.
+    “Worldwide CIO Agenda 2019 Predictions
+
+Shuyu Chen ; Zhen Zhou ; and Tianshu
+    Jun Liu, , , Wu
+
+D Vrushali
+    and SN Pawar
+
+Chong Zhou
+    and Randy C Paffenroth
+
+Qiang Fu ; Shengqi YANG ; Jiang Li ; and Jian-Guang
+    Ye XU, , Lou
+
+o.A.
+    NO TITLE
+
+Sandeep Dalal
+    and Rajender Singh Chhillar
+
+Jasmin Bogatinovski ; Sasho Nedelkoski ; Johan Thordsson ; and Odej
+    Li Wu, , , , Kao
+
+Yuan Meng ; Shenglin Zhang ; Yongqian Sun ; Ruru Zhang ; Zhilong Hu ; Yiyin Zhang ; Chenyang Jia ; Zhaogang Wang ; and Dan
+
+
+Stelios Sidiroglou ; Oren Laadan ; Carlos Perez ; Nicolas Viennot ; Jason Nieh ; and Angelos
+    D Keromytis
+
+Eric M Dashofy ; Andre Van der Hoek ; and Richard
+
+
+Benoit Donnet ; Philippe Raoult ; Timur Friedman ; and Mark
+
+
+Benoit Donnet ; Timur Friedman ; and Mark
+
+
+Benoit Donnet
+    and Timur Friedman
+
+o.A.
+    NO TITLE
+
+Giuseppe Muntoni ; Jacopo Soldani ; and Antonio
+
+
+Charu C. Aggarwal.
+    “Outlier Analysis.” In: Data Mining. Springer. 2015
+
+Frank E Grubbs.
+    “Procedures for Detecting Outlying Observations in Samples
+
+o.A.
+    Lukas Ruff, Jacob R. Kauffmann, Robert A. Vandermeulen, Gregoire Montavon, Wojciech Samek, Marius Kloft, Thomas G. Dietterich, and Klaus
+
+James P Theiler
+    and D Michael Cai
+
+Ingo Steinwart ; Don Hush ; and Clint
+
+
+o.A.
+    NO TITLE
+
+Lukas Ruff ; Yury Zemlyanskiy ; Robert Vandermeulen ; Thomas Schnake ; and Marius
+
+
+o.A.
+    NO TITLE
+
+Ian T Jolliffe
+    and Jorge Cadima
+
+Yoshua Bengio ; Aaron Courville ; and Pascal
+
+
+Wei Wang ; Yan Huang ; Yizhou Wang ; and Liang
+
+
+Mayu Sakurada
+    and Takehisa Yairi
+
+Dan Hendrycks ; Mantas Mazeika ; Saurav Kadavath ; and Dawn
+
+
+Faruk Ahmed
+    and Aaron Courville
+
+o.A.
+    Yuki M. Asano, Christian Rupprecht, and Andrea Vedaldi. A Critical Analysis of Self
+
+Guilherme O Campos ; Arthur Zimek ; Jörg Sander ; Ricardo JGB Campello ; Barbora Micenkova ; Erich Schubert ; Ira Assent ; and Michael
+
+
+Fei Tony Liu ; Kai Ming
+    Ting, and Zhi-Hua Zhou
+
+Markus M Breunig ; Hans-Peter Kriegel ; Raymond T Ng ; and Jörg
+
+
+Tomas Mikolov ; Ilya Sutskever ; Kai Chen ; Greg S Corrado ; and Jeff
+
+
+Ruoxi Jia ; and Dawn
+    Min Du, , Song
+
+Suhas Kabinna ; Cor-Paul Bezemer ; Weiyi Shang ; Mark D Syer ; and Ahmed
+
+
+Zhi Chen ; Chang Liu ; Rajvardhan Oak ; and Dawn
+    Min Du, , , , Song
+
+Lianping Chen.
+    “Continuous Delivery: Huge Benefits, But Challenges Too
+
+Debra (Dallie) Sandilands.
+    “Univariate Analysis.” In: Encyclopedia of Quality of Life and Well-Being Research. Ed. by Alex C. Michalos. Dordrecht: Springer Netherlands
+
+o.A.
+    NO TITLE
+
+Mohammad Braei Sebastian Wagner. Anomaly Detection in Univariate Time-series
+    A Survey on the State-of-the-Art
+
+Meir Toledano ; Ira Cohen ; Yonatan Ben-Simhon ; and Inbal
+
+
+Jieming Zhu ; Zibin Zheng ; and Michael
+    Pinjia He, , , R Lyu
+
+Ling Huang ; Armando Fox ; David Patterson ; and Michael
+    Wei Xu, , , , I Jordan
+
+Marco Fraccaro ; Soren Kaae Sonderby ; Ulrich Paquet ; and Ole
+
+
+S. Nedelkoski L. Thamsen ; I. Verbitskiy O. Kao.
+    “Multilayer Active Learning for Efficient Learning and Resource Usage in Distributed IoT Architectures
+
+o.A.
+    NO TITLE
+
+Friedrich Pukelsheim.
+    “The Three Sigma Rule
+
+Sergey Ioffe
+    and Christian Szegedy
+
+Albert Nuttall.
+    “Some Windows with Very Good Sidelobe Behavior
+
+Alexander Acker ; Florian Schmidt ; Anton Gulenko ; Reinhard Kietzmann ; and Odej
+
+
+Diederik P. Kingma
+    and Max Welling
+
+Jinwon An Sungzoon Cho.
+    “Variational Autoencoder-Based Anomaly Detection using Reconstruction Probability
+
+Michael I Jordan ; Zoubin Ghahramani ; Tommi S Jaakkola ; and Lawrence
+
+
+Samuel R. Bowman ; Luke Vilnis ; Oriol Vinyals ; Andrew Dai ; Rafal Jozefowicz ; and Samy
+
+
+David E. Rumelhart ; Geoffrey E. Hinton ; and Ronald
+
+
+Sepp Hochreiter.
+    “The Vanishing Gradient Problem During Learning Recurrent Neural Nets and Problem Solutions
+
+Sepp Hochreiter
+    and Jürgen Schmidhuber
+
+Bart Van Merrienboer ; Dzmitry Bahdanau ; and Yoshua
+    Kyunghyun Cho, , , Bengio
+
+Junyoung Chung ; Kyle Kastner ; Laurent Dinh ; Kratarth Goel ; Aaron C Courville ; and Yoshua
+
+
+Murray Rosenblatt.
+    “A central limit theorem and a strong mixing condition
+
+Yann LeCun ; Yoshua Bengio
+
+
+Bendong Zhao ; Shangfeng Chen ; Junliang Liu
+    Huanzhang Lu, , , and Dongya Wu
+
+Leo Breiman.
+    “Random Forests.” In: Machine Learning 45.1
+
+M˜ahesh V Joshi ; Ramesh C Agarwal ; and Vipin
+
+
+Mahesh V Joshi ; Ramesh C Agarwal ; and Vipin
+
+
+Nitesh V Chawla ; Nathalie Japkowicz ; and Aleksander
+
+
+Hendrik Fichtenberger ; Marc Gille ; Melanie Schmidt ; Chris Schwiegelshohn ; and Christian
+
+
+Tapas Kanungo ; David M Mount ; Nathan S Netanyahu ; Christine D Piatko ; Ruth Silverman ; and Angela
+
+
+Larry M Manevitz
+    and Malik Yousef
+
+Pankaj Malhotra ; Lovekesh Vig ; Gautam Shroff ; and Puneet
+
+
+Pavel Filonov ; Andrey Lavrentyev ; and Artem
+
+
+Owen Vallis ; Jordan Hochenbaum ; and Arun
+
+
+Kyle Hundman ; Valentino Constantinou ; Christopher Laporte ; Ian Colwell ; and Tom
+
+
+Dapeng Liu ; Youjian Zhao ; Haowen Xu ; Yongqian Sun ; Dan Pei ; Jiao Luo ; Xiaowei Jing ; and Mei
+
+
+Bo Zong ; Qi Song ; Martin Renqiang Min ; Wei Cheng ; Cristian Lumezanu ; Daeki Cho ; and Haifeng
+
+
+Daehyung Park ; Yuuna Hoshi ; and Charles
+
+
+Shilin He ; Jieming Zhu ; and Michael
+    Pinjia He, R
+
+Juan Ramos et al.
+    “Using TF-IDF to Determine Word Relevance in Document Queries
+
+Jieming Zhu ; Shilin He ; Jian Li ; and Michael
+    Pinjia He, , , , R Lyu
+
+Sasho Nedelkoski ; Harald Ott ; Jasmin Bogatinovski ; Alexander Acker ; and Odej
+
+
+Lingxue Zhu Nikolay Laptev.
+    “Deep and Confident Prediction for Time Series at Uber
+
+Shaohan Huang ; Carol Fung ; Rong He ; Yining Zhao ; Hailong Yang
+    Yi Liu, , , , , and Zhongzhi Luan
+
+Wilson L Taylor.
+    ““Cloze procedure”: A new tool for measuring readability
+
+Ashish Vaswani ; Noam Shazeer ; Niki Parmar ; Jakob Uszkoreit ; Llion Jones ; Aidan N Gomez ; Łukasz Kaiser ; and Illia
+
+
+Adam Oliner
+    and Jon Stearley
+
+Alexandre B Tsybakov et al.
+    “On Nonparametric Estimation of Density Level Sets
+
+Edward Loper
+    and Steven Bird
+
+Ziming Zheng ; Wei Tang ; Zhiling Lan ; Rinku Gupta ; Narayan Desai ; Susan Coghlan ; and Daniel
+    Li Yu, , , , , , Buettner
+
+Laurens van der Maaten
+    and Geoffrey Hinton
+
+Weiyi Shang.
+    “Log Engineering: Towards Systematic Log Mining to Support the Development of Ultra-Large Scale Systems
+
+Masayoshi Mizutani.
+    “Incremental Mining of System Log Format
+
+Keiichi Shima.
+    “Length Matters: Clustering System Log Messages Using Length of Words
+
+Qiang Fu ; Jian-Guang Lou ; Yi Wang ; and Jiang
+
+
+Meiyappan Nagappan
+    and Mladen A Vouk
+
+Animesh Nandi ; Atri Mandal ; Shubham Atreja ; Gargi B Dasgupta ; and Subhrajit
+    Bhattacharya
+
+Salma Messaoudi ; Annibale Panichella ; Domenico Bianculli ; Lionel Briand ; and Raimondas
+
+
+Zhen Ming Jiang ; Ahmed E Hassan ; Gilbert Hamann ; and Parminder
+
+
+Peter Bodik ; Moises Goldszmidt ; Armando Fox ; Dawn B Woodard ; and Hans
+
+
+Mike Chen ; Alice X Zheng ; Jim Lloyd ; Michael I Jordan ; and Eric
+
+
+Mostafa Farshchi ; Jean-Guy Schneider ; Ingo Weber ; and John
+
+
+Yinglung Liang ; Yanyong Zhang ; Hui Xiong ; and Ramendra
+
+
+X. Xu ; L. Zhu ; I. Weber ; L. Bass ; D. Sun.
+    “POD-Diagnosis: Error Diagnosis of Sporadic Operations on Cloud Applications
+
+Jakub Breier
+    and Jana Branisova
+
+Ke Zhang ; Jianwu Xu ; Martin Renqiang Min ; Guofei Jiang ; Konstantinos Pelechrinis
+    and Hui Zhang
+
+R. Vinayakumar ; K. P. Soman
+    Prabaharan Poornachandran
+
+Christophe Bertero ; Matthieu Roy ; Carla Sauvanaud ; and Gilles
+
+
+Antonio Pecchia ; Ingo Weber ; Marcello Cinque
+
+
+Timo Nolle ; Alexander Seeliger ; and Max
+
+
+Timo Nolle ; Stefan Luettgen ; Alexander Seeliger ; and Max
+
+
+Timo Nolle ; Stefan Luettgen ; Alexander Seeliger ; and Max
+
+
+Fareed Zandkarimi ; Jana-Rebeca Rehse ; Pouya Soudmand ; and Hartmut
+
+
+Ping Liu ; Haowen Xu ; Qianyu Ouyang ; Rui Jiao ; Zhekang Chen ; Shenglin Zhang ; Jiahai Yang ; Linlin Mo ; Jice Zeng ; Wenman Xue
+
+
+Jasmin Bogatinovski ; Sasho Nedelkoski
+    and Jorge Cardoso. Distributed Trace Anomaly Detection with Self-Attention based Deep Learning. Filled in European Patent Office, 9014694.
+
+Pascal Vincent ; Hugo Larochelle ; Isabelle Lajoie ; Yoshua Bengio ; and Pierre-Antoine
+
+
+Jacob Devlin ; Ming-Wei Chang ; Kenton Lee ; and Kristina Toutanova. BERT
+    Pre-Training of Deep Bidirectional Transformers for Language Understanding
+
+Michael Chow ; David Meisner ; Jason Flinn ; Daniel Peek ; and Thomas
+
+
+Zhiheng Huang ; and Kai
+    Wei Xu, Yu
+
+Alok Shrivastwa ; Sunil Sarat ; Kevin Jackson ; Cody Bunch ; Egle Sigler ; and Tony Campbell. OpenStack
+    Building a Cloud Environment
+
+Jasmin Bogatinovski
+    and Sasho Nedelkoski
+
+Sasho Nedelkoski ; Mihail Bogojeski ; and Odej
+
+
+Mostafa Farshchi ; Jean-Guy Schneider ; Ingo Weber ; and John
+
+
+I. Weber S. Nepal L. Zhu.
+    “Developing Dependable and Secure Cloud Applications
+
+o.A.
+    NO TITLE
+
+Peter Zadrozny Raghu Kodali. Big Data Analytics Using Splunk
+    Deriving Operational Intelligence from Social Media, Machine Data, Existing Data Warehouses, and Other Real-Time Streaming Sources
+
+o.A.
+    NO TITLE
+
+o.A.
+    NO TITLE
+
+Philip Tee
+    Robert Duncan Harper, and Charles Mike Silvey. System for Decomposing Events from Managed Infrastructures Using a Topology Proximity Engine, Graph Topologies, and K-Means Clustering. US Patent 9,529,890.
+
+Philip Tee
+    Robert Duncan Harper, Charles Mike Silvey, Andrew John Leonard, and Jeffrey Ellison Townsend. Alert Dashboard System and Method from Event Clustering. US Patent 9,607,074.
