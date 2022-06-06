@@ -7,7 +7,6 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import elements
 import iamraw
 import serializeraw
 import texmex
@@ -29,7 +28,7 @@ def run(  # pylint:disable=R0914
     oneline_textpositions: str,
     pages: tuple = None,
 ) -> iamraw.BibliographyTable:
-    pageslist = prepare_pages(pages)
+    pageslist = bibliography.utils.prepare_pages(pages)
     parts = []
     for selected in pageslist:
         textnavigators = serializeraw.ptcn_fromfile(
@@ -59,7 +58,7 @@ def run(  # pylint:disable=R0914
     headline, pdfpages = None, None
     if references:
         pdfpages = tuple(sorted({item.raw_pdfpage for item in references}))
-        headline = search_headline(
+        headline = bibliography.utils.search_headline(
             oneline_text,
             oneline_textpositions,
             sizeandborder,
@@ -114,46 +113,3 @@ def extracts(
         best = selected
         best_strategy = strategy
     return best, best_strategy
-
-
-def search_headline(
-    text: str,
-    textpositions: str,
-    sizeandborder: str,
-    headerfooter: str,
-    page: int = None,
-) -> str:
-    """Search bibliography headline to signal the user to use
-    Bibliography or References.
-    """
-    textnavigator = serializeraw.ptcn_fromfile(
-        text,
-        textpositions,
-        sizeandborder,
-        headerfooter,
-        pages=page,
-    )[0]
-    for line in textnavigator[0:8]:
-        line: str = line.text.strip()
-        headline = elements.parse_headline(line)
-        if headline is None:
-            continue
-        headline = headline[0]
-        if not utila.verysimilar(
-                current=headline,
-                expected=elements.BIBLIOGRAPHY,
-        ):
-            continue
-        return headline
-    return None
-
-
-def prepare_pages(pages) -> list:
-    # analyze all pages
-    pageslist = [None]
-    # ensure to have connected pages
-    if pages:
-        pageslist = utila.groupby_diff(pages)
-    if len(pageslist) > 1:
-        utila.log(f'more than one potential bib section: {len(pageslist)}')
-    return pageslist
