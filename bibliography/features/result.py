@@ -9,27 +9,30 @@
 
 import serializeraw
 
-import bibliography.strategy
-
 
 def work(
-    text: str,
-    textpositions: str,
-    sizeandborder: str,
-    headerfooter: str,
-    oneline_text: str,
-    oneline_textpositions: str,
-    pages: tuple = None,
+    xalternate: str,
+    xcolumn: str,
+    xvspace: str,
 ) -> str:
-    best = bibliography.strategy.run(
-        text,
-        textpositions,
-        sizeandborder=sizeandborder,
-        headerfooter=headerfooter,
-        oneline_text=oneline_text,
-        oneline_textpositions=oneline_textpositions,
-        pages=pages,
-    )
-    # dump result
+    alternate = serializeraw.load_bibliography_reference(xalternate)
+    column = serializeraw.load_bibliography_reference(xcolumn)
+    vspace = serializeraw.load_bibliography_reference(xvspace)
+
+    count_column = len(column.references)
+    # alternate extracts a lot of more possible bibs, therefore we
+    # have to punish the number of results. HolyValue: 0.5
+    count_alternate = len(alternate.references) * 0.7
+    count_vspace = len(vspace.references) * 0.5
+
+    count_best, best = count_column, column
+    for value, selected in [
+        (count_alternate, alternate),
+        (count_vspace, vspace),
+    ]:
+        if value < count_best:
+            continue
+        count_best = value
+        best = selected
     dumped = serializeraw.dump_bibliography_reference(best)
     return dumped

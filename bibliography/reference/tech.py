@@ -20,9 +20,9 @@ import iamraw
 import utila
 
 import bibliography.label
+import bibliography.quotes
 import bibliography.reference
 import bibliography.reference.freeand
-import bibliography.quotes
 
 
 @functools.lru_cache(maxsize=4096)

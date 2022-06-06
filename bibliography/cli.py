@@ -49,12 +49,9 @@ WORKPLAN = [
     utila.create_step(
         'result',
         inputs=[
-            utila.ResultFile('rawmaker', 'text_text'),
-            utila.ResultFile('rawmaker', 'text_positions'),
-            utila.ResultFile('rawmaker', 'border_pages'),
-            utila.ResultFile('groupme', 'footer_footerheader'),
-            utila.ResultFile('rawmaker', 'oneline_text_text'),
-            utila.ResultFile('rawmaker', 'oneline_text_positions'),
+            utila.ResultFile('bibliography', 'alternate_alternate'),
+            utila.ResultFile('bibliography', 'column_column'),
+            utila.ResultFile('bibliography', 'vspace_vspace'),
         ],
         output=('result',),
     ),
