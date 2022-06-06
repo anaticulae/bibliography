@@ -80,8 +80,6 @@ MAXDISTANCE = configo.HolyTable(
         (60.0, 50.0),  # UPPER LIMIT
     ],
     strategy=utila.Strategy.LOWER,
-    left_outranges_none=False,
-    right_outranges_none=False,
 )
 
 MAXDISTANCE_FACTOR = configo.HolyList([

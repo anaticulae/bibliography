@@ -15,16 +15,12 @@ import bibliography.utils
 
 TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
 
-INVALID_MAX = configo.HolyTable(
-    items=[
-        (5, 0),
-        (15, 0),
-        (30, 3 / 30),
-        (100, 10 / 100),
-    ],
-    right_outranges_none=False,
-    left_outranges_none=False,
-)
+INVALID_MAX = configo.HolyTable(items=[
+    (5, 0),
+    (15, 0),
+    (30, 3 / 30),
+    (100, 10 / 100),
+])
 
 
 def judge(pages: list) -> list:
