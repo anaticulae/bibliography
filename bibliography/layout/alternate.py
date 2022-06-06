@@ -72,6 +72,10 @@ def extract(content) -> iamraw.BibliographyReferences:
         return []
     result = []
     for group in content:
+        for line in group:
+            # TODO: REMOVE THIS HACK LATER
+            line.text = line.text.rstrip()
+            line.text += utila.NEWLINE
         raw = texmex.connect_text(group)
         parsed = split_bibliography(raw)
         if not parsed:
