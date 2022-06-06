@@ -199,13 +199,3 @@ def bibtable_raw(value: list) -> str:
         connected.append('')
     result = utila.NEWLINE.join(connected).strip()
     return result
-
-
-@utilatest.requires(power.BACHELOR037_PDF)
-def test_bib_headline_bachelor037(testdir, monkeypatch):
-    source = power.link(power.BACHELOR037_PDF)
-    cmd = f'-i {source} -o {testdir.tmpdir} --pages=33'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    table = serializeraw.load_bibliography_reference(content=testdir.tmpdir)
-    assert table.headline == 'Literaturangaben'
-    assert table.pdfpages == (33,)
