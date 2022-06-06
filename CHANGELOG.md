@@ -2,6 +2,14 @@
 
 Every noteable change is logged here.
 
+## v0.2.0
+
+### Feature
+
+* use separate step results (c75e385e52ed)
+* move alternate and vspace into separate step (98120fef94a9)
+* move strategy to separate step (590fe2c63dd3)
+
 ## v0.1.0
 
 ### Feature
