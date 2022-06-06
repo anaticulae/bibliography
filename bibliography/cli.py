@@ -15,6 +15,18 @@ DESCRIPTION = ''
 
 WORKPLAN = [
     utila.create_step(
+        'column',
+        inputs=[
+            utila.ResultFile('rawmaker', 'text_text'),
+            utila.ResultFile('rawmaker', 'text_positions'),
+            utila.ResultFile('rawmaker', 'oneline_text_text'),
+            utila.ResultFile('rawmaker', 'oneline_text_positions'),
+            utila.ResultFile('rawmaker', 'border_pages'),
+            utila.ResultFile('groupme', 'footer_footerheader'),
+        ],
+        output=('column',),
+    ),
+    utila.create_step(
         'result',
         inputs=[
             utila.ResultFile('rawmaker', 'text_text'),
