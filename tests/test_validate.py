@@ -124,7 +124,7 @@ def master148(flat):
 ])
 # yapf:enable
 @utilatest.longrun
-def test_bibliography_run(
+def test_validate(
     source,
     pages,
     expected,
