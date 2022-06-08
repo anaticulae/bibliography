@@ -12,7 +12,11 @@
 
 import utila
 
-YEARS = utila.compiles(r'(?P<year>(19|20)\d{2})')
+YEARS = utila.compiles(r"""
+    (?P<year>
+        (19|20)\d{2}
+    )
+""")
 
 
 @utila.cacheme
@@ -24,5 +28,4 @@ def years(raw: str):
     matched = YEARS.search(raw)
     if not matched:
         return None
-    raw = utila.extract_match(matched)
-    return (raw, int(raw))
+    return (matched[0], int(matched['year']))
