@@ -13,6 +13,7 @@
 BibliographyReference(title='Privacy no longer a social norm, says Facebook founder'...)
 """
 
+import configo
 import german
 import iamraw
 import utila
@@ -157,6 +158,14 @@ FIRST_SPLIT = utila.compiles(r"""
 )
 """)
 
+AUTHOR_LENGTH_MAX = configo.HV_INT_PLUS(default=160)
+
+REST_LENGTH_MIN = configo.HV_INT_PLUS(default=30)
+
+REST_TITLE_START_MIN = configo.HV_INT_PLUS(default=20)
+
+PUBLISHER_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+
 
 @utila.cacheme
 def parse_first(content: str):
@@ -179,10 +188,10 @@ def parse_first(content: str):
         return None
     authors, rest = content[:detected.start()], content[detected.start():]
     rest = rest[1:] if rest[0] == ':' else rest
-    if len(authors) > 160:  # TODO: HOLY VALUE
+    if len(authors) > AUTHOR_LENGTH_MAX:
         # WAY TO LONG
         return None
-    if not rest or len(rest) < 30:
+    if not rest or len(rest) < REST_LENGTH_MIN:
         return None
     return authors, rest
 
@@ -190,7 +199,7 @@ def parse_first(content: str):
 @utila.cacheme
 def parse_title(rest: str) -> tuple:
     rest = rest.strip()
-    if rest.find('.') > 20:  # TODO: TITLE MIN LENGTH
+    if rest.find('.') > REST_TITLE_START_MIN:
         return rest.split('.', maxsplit=1)
     if ';' in rest:
         return rest.split(';', maxsplit=1)
@@ -204,7 +213,7 @@ def parse_publisher(rest: str):
     if not rest:
         return None
     rest = rest.strip()
-    if len(rest) < 10:
+    if len(rest) < PUBLISHER_LENGTH_MIN:
         # Not a valid publisher
         return None
     return rest
