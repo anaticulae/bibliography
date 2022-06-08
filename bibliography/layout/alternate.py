@@ -135,17 +135,7 @@ def parse_last(raw: str) -> iamraw.BibliographyReference:
     result = iamraw.BibliographyReference(
         authors=[authors],
         title=title,
-        year=int_ornone(year),
+        year=utila.int_ornone(year),
         raw=content,
     )
     return result
-
-
-def int_ornone(item: str) -> int:
-    # TODO: REPLACE WITH UTILA CODE
-    if item is None:
-        return item
-    item = str(item).strip()
-    if not item:
-        return None
-    return int(item)
