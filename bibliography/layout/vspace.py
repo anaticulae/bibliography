@@ -49,7 +49,7 @@ def optimize_global(
             current.extend(extracted)
         results.append(current)
     best = select_best(results)
-    result = groupby_x(best, lambda x: x.raw_pdfpage)
+    result = utila.groupby_x(best, selector=lambda x: x.raw_pdfpage)
     return result
 
 
@@ -113,16 +113,3 @@ def select_best(items: list, selector=len) -> typing.Any:
             continue
         best = item
     return best
-
-
-def groupby_x(items, selector):
-    # TODO: MOVE TO UTILA
-    if not items:
-        return []
-    result = [[items[0]]]
-    for item in items[1:]:
-        if selector(result[-1][0]) == selector(item):
-            result[-1].append(item)
-        else:
-            result.append([item])
-    return result
