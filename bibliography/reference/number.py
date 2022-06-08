@@ -60,17 +60,14 @@ def parse(raw: str) -> iamraw.BibliographyReference:
     return parsed
 
 
-SPLITTER = re.compile(
-    r"""
+SPLITTER = utila.compiles(r"""
     ^
     (?:
         \[(\d{1,4})\]|       # [1] W. Abmayr.
         (\d{1,4})\.          # 4. Guy, G.P., Thomas
     )
     [ ]{0,4}
-    """,
-    re.X | re.DOTALL,
-)
+""")
 
 
 @utila.cacheme
@@ -93,8 +90,8 @@ def split(raw: str) -> tuple:
     return number, data
 
 
-PATTERN = re.compile(
-    r"""^
+PATTERN = utila.compiles(r"""
+    ^
     (?P<authors>
         (
             (\w\.[ ]{0,3}){1,2}             # short first name
@@ -111,9 +108,7 @@ PATTERN = re.compile(
     (?P<year>\d{4})
     [ ]{0,3}
     \.{0,1}
-    """,
-    re.X | re.DOTALL,
-)
+""")
 
 
 @utila.cacheme
