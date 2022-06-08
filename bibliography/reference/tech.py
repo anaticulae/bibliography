@@ -64,7 +64,7 @@ def parse_longtext(content: str) -> iamraw.BibliographyReference:
     BibliographyReference(title='Customer & supplier relationship management'...year=2008...)
     >>> parse_longtext('HORNIG, Frank (17.7.2006): Du bist das Netz! '
     ... 'http://www.spiegel.de/spiegel/print/d47602985.html (Stand: 15.7.2014).')
-    BibliographyReference(title='Du bist das Netz!  (Stand: 15',...authors=[Person(...raw='HORNIG Frank')]...)
+    BibliographyReference(title='Du bist das Netz!',...authors=[Person(...raw='HORNIG Frank')]...)
     >>> parse_longtext('DOYLE, Ron (20.5.2010): You 2.0. Is technology changing who we are? http://www.psychologytoday.com/')
     BibliographyReference(title='You 2.0. Is technology changing who we are?'...)
     """
