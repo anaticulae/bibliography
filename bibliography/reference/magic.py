@@ -20,6 +20,8 @@ import utila
 
 YEAR = utila.compiles(r'(\d{4})\.$')
 
+NO_AUTHOR = [['']]
+
 
 @utila.cacheme
 def parse(raw: str) -> iamraw.BibliographyReference:
@@ -46,7 +48,7 @@ def parse(raw: str) -> iamraw.BibliographyReference:
         return None
     collected: str = ','.join(collected)
     authors, authors_raw = german.authors(collected, verbose=True)
-    if authors == [['']]:
+    if authors == NO_AUTHOR:
         # HACK: remove empty authors
         return None
     authors = german.authors_decide(authors)
