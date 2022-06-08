@@ -7,10 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import re
-
 import german
 import pattern
+import utila
 
 VALIDS = 'u.a. and und & et.al.'.split()
 
@@ -36,7 +35,7 @@ def collect(text: str) -> str:
     return authors
 
 
-NAME = re.compile(r'\w{1,3}\.')
+NAME = utila.compiles(r'\w{1,3}\.')
 
 
 def till_valid(text: str, error_max: int = 1):

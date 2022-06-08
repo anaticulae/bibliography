@@ -27,7 +27,6 @@ Number:
 """
 
 import contextlib
-import re
 
 import iamraw
 import utila
@@ -101,7 +100,7 @@ TECHNICAL_SPECIAL = r"""
 def parses(content: str) -> iamraw.BibliographyReferences:
     result = []
     for pattern in (TECHNICAL_SPECIAL, TECHNICAL):
-        for item in re.finditer(pattern, content, re.VERBOSE):
+        for item in utila.finditer(pattern, content):
             page, pageend, raw = extract_pages(item)
             techref, plus, year = extract_author(item)
             reference = iamraw.BibliographyReference(
@@ -133,7 +132,7 @@ NUMBER = r"""
 @utila.cacheme
 def numbers(content: str) -> iamraw.BibliographyReferences:
     result = []
-    for item in re.finditer(NUMBER, content, re.VERBOSE):
+    for item in utila.finditer(NUMBER, content):
         page, pageend, raw = extract_pages(item)
         number = str(item['number'])
         reference = iamraw.BibliographyReference(
