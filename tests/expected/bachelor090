@@ -36,6 +36,9 @@ DORINA C. PETRIU ; NICOLAS ROUQUETTE ; OYSTEIN HAUGEN
 DUSTIN E. ; RASHKA J. ; PAUL J.
     Software Automatisch Testen: Verfahren, Handhabung Und Leistung
 
+Eclipse Modeling Framework Project (EMF).
+    org/modeling/emf
+
 FR ÜHAUF K. ; LUDEWIG J. ; SANDMAYR H.
     Software-Prüfung: Eine Anleitung zum Test und zur Inspektion
 
@@ -77,6 +80,9 @@ Production Code Generation Integration - Algorithm Export(ANSI-C).
 
 R2012a Documentation ; Simulink.
     help/toolbox/simulink/sfg/sssetinputportdatatype
+
+R2012a Documentation ; Simulink ; Inline parameters.
+    http: // bstq6gp-1.html?nocookie=true#bq7cq12-1
 
 NICOLAS NAVET ; Francoise Simonot-Lion
     Automotive Embedded Systems Handbook
