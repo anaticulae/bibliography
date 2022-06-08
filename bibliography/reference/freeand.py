@@ -38,8 +38,6 @@ Examples
 
 """
 
-import re
-
 import german
 import iamraw
 import utila
@@ -53,7 +51,7 @@ def parse_longtext(
     content = utila.normalize_text(content)
     pattern = NORMAL if pattern is None else pattern
     raw = content
-    matched = re.search(pattern, content, re.VERBOSE | re.IGNORECASE)
+    matched = utila.search(pattern, content)
     if not matched:
         return None
     authors = select_authors(matched)
@@ -136,6 +134,8 @@ BROKEN_BRACKETS = AND % (r'[\(\[]', MONTH, r'[\]\)]')
 
 NOTITLE = False
 
+TITLE_START = utila.compiles(r'[\.\?\!][ ]')
+
 
 @utila.cacheme
 def parse_title(content: str) -> tuple:  # pylint:disable=R0911,R1260
@@ -150,7 +150,7 @@ def parse_title(content: str) -> tuple:  # pylint:disable=R0911,R1260
     # 1b. Try splitting till link starts
     # 2.  Extend number of valid dots
     try:
-        title, rest = re.split(r'[\.\?\!][ ]', content, maxsplit=1)
+        title, rest = TITLE_START.split(content, maxsplit=1)
         # TODO: INCLUDE SENTENCE SIGN
         if invalid_title(title) == NOTITLE:
             # None means no title given
