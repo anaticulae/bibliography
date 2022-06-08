@@ -51,11 +51,6 @@ def parse_single_row(content: str) -> iamraw.BibliographyReference:
     return matched
 
 
-def ghost_strip(text, pattern, count: int = 1):
-    text = text.replace(pattern, '*' * len(pattern), count)
-    return text
-
-
 @utila.cacheme
 def parse_longtext(content: str) -> iamraw.BibliographyReference:
     """\
@@ -91,7 +86,7 @@ def parse_longtext(content: str) -> iamraw.BibliographyReference:
     authors = german.authors_decide(authors)
     page = german.pages(rest)
     if page:
-        rest = ghost_strip(rest, page[0])
+        rest = utila.ghost_replace(rest, page[0])
     # TODO: ADD PUBLISHER EXTRACTOR
     rest = rest.strip()
     publisher = parse_publisher(rest)

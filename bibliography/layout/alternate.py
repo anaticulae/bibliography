@@ -21,7 +21,6 @@
     Recognition, 29(10):1673 – 1687, 1996.
 """
 
-
 import configo
 import geostrat
 import iamraw
