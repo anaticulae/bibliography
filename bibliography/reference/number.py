@@ -166,8 +166,7 @@ def improve_raw(authors: str) -> str:
     'Grunwald Armin; Gerhard Banse; Christopher Coenen ; Leonhard Hennen'
     """
     separator = ',' if authors.count(',') >= authors.count(';') else ';'
-    authors = re.sub(r'\band\b', f'{separator}', authors)
-    authors = re.sub(r'\bund\b', f'{separator}', authors)
+    authors = re.sub(r'\b(and|und)\b', f'{separator}', authors)
     authors = authors.strip(',; ')
     return authors
 
