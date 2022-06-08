@@ -19,7 +19,7 @@ import bibliography.layout.column
 def test_parse_bibliography_bachelor63_page59():
     """Latex double column. Left side with [Hem10] pattern"""
     pages = (59)
-    navigators = serializeraw.create_pagetextnavigators_frompath(
+    navigators = serializeraw.ptn_frompath(
         power.link(power.BACHELOR063_PDF),
         # fill_empty=False,
         pages=pages,
@@ -33,7 +33,7 @@ def test_parse_bibliography_bachelor63_page59():
 @utilatest.requires(power.BACHELOR037_PDF)
 def test_parse_bibliography_bachelor37():
     pages = (33,)
-    navigators = serializeraw.create_pagetextnavigators_frompath(
+    navigators = serializeraw.ptn_frompath(
         power.link(power.BACHELOR037_PDF),
         pages=pages,
     )

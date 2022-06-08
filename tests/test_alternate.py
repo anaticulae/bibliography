@@ -25,7 +25,7 @@ import bibliography.layout.alternate
 @utilatest.longrun
 @utilatest.requires(power.MASTER116_PDF)
 def test_parse_bibliography_master116_page_x(pages, expected):
-    navigators = serializeraw.create_pagetextnavigators_frompath(
+    navigators = serializeraw.ptn_frompath(
         power.link(power.MASTER116_PDF),
         prefix='oneline',
         pages=pages,
@@ -39,7 +39,7 @@ def test_parse_bibliography_master116_page_x(pages, expected):
 def test_parse_bibliography_hurenkind():
     expected = 7  # VALIDATED; 8 with item from before, but item in not completed
     pages = (51,)
-    navigators = serializeraw.create_pagetextnavigators_frompath(
+    navigators = serializeraw.ptn_frompath(
         power.link(power.BACHELOR056_PDF),
         prefix='oneline',
         pages=pages,
