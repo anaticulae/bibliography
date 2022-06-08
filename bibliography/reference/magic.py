@@ -14,11 +14,11 @@ Bergsträsser, Gotthelf, Einführung in die semitischen Sprachen, München:
         Max Hueber Verlag 1963.
 """
 
-import re
-
 import german
 import iamraw
 import utila
+
+YEAR = utila.compiles(r'(\d{4})\.$')
 
 
 @utila.cacheme
@@ -50,7 +50,7 @@ def parse(raw: str) -> iamraw.BibliographyReference:
         # HACK: remove empty authors
         return None
     authors = german.authors_decide(authors)
-    year_raw = re.search(r'(\d{4})\.$', raw)
+    year_raw = YEAR.search(raw)
     year = int(year_raw[1]) if year_raw else None
     rest = rest.replace(authors_raw, '')
     if year_raw:
