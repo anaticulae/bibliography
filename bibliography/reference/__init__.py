@@ -10,9 +10,9 @@
 =========
 """
 
-import re
-
 import utila
+
+YEARS = utila.compiles(r'(?P<year>(19|20)\d{2})')
 
 
 @utila.cacheme
@@ -21,8 +21,7 @@ def years(raw: str):
     >>> years('IEEE Joint, 2004, S. 113–117')
     ('2004', 2004)
     """
-    pattern = r'(?P<year>(19|20)\d{2})'
-    matched = re.search(pattern, raw, re.VERBOSE)
+    matched = YEARS.search(raw)
     if not matched:
         return None
     raw = utila.extract_match(matched)
