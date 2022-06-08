@@ -13,8 +13,6 @@
 BibliographyReference(title='Privacy no longer a social norm, says Facebook founder'...)
 """
 
-import functools
-
 import german
 import iamraw
 import utila
@@ -25,7 +23,7 @@ import bibliography.reference
 import bibliography.reference.freeand
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_single_row(content: str) -> iamraw.BibliographyReference:
     matched = bibliography.label.parses(content)
     if not matched:
@@ -58,7 +56,7 @@ def ghost_strip(text, pattern, count: int = 1):
     return text
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_longtext(content: str) -> iamraw.BibliographyReference:
     """\
     >>> parse_longtext('Todd D. Jick. “Mixing Qualitative and Quantitative '
@@ -165,7 +163,7 @@ FIRST_SPLIT = utila.compiles(r"""
 """)
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_first(content: str):
     """\
     >>> parse_first('Put People First. http://www.putpeoplefirst.org.uk/ (19.1.2015).')
@@ -194,7 +192,7 @@ def parse_first(content: str):
     return authors, rest
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_title(rest: str) -> tuple:
     rest = rest.strip()
     if rest.find('.') > 20:  # TODO: TITLE MIN LENGTH
@@ -206,7 +204,7 @@ def parse_title(rest: str) -> tuple:
     return None
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_publisher(rest: str):
     if not rest:
         return None

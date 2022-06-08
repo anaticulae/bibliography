@@ -24,7 +24,6 @@ and Speech. Technical report, Presto Space, 3 2005.
 
 """
 
-import functools
 import re
 
 import german
@@ -34,7 +33,7 @@ import utila
 import bibliography.quotes
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def nosplit(raw: str) -> iamraw.BibliographyReference:
     parsed = content(raw)
     if not parsed:
@@ -42,7 +41,7 @@ def nosplit(raw: str) -> iamraw.BibliographyReference:
     return parsed
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> parse('[1] Ahrens, Thomas ; Hanke, Hans-Joachim ; Scheel, Wolfgang: '
@@ -74,7 +73,7 @@ SPLITTER = re.compile(
 )
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def split(raw: str) -> tuple:
     """\
     >>> split('[1] W. Abmayr. Einführung in die digitale')
@@ -117,7 +116,7 @@ PATTERN = re.compile(
 )
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def content(
     raw: str,
     title_length_min: int = 10,
@@ -165,7 +164,7 @@ def content(
     return result
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def improve_raw(authors: str) -> str:
     """\
     >>> improve_raw('Grunwald Armin; Gerhard Banse; Christopher Coenen und Leonhard Hennen')
@@ -178,7 +177,7 @@ def improve_raw(authors: str) -> str:
     return authors
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def search_author(raw: str):
     """\
     >>> search_author('N. Jakob, S. H. Weber, M. C. Müller, I. Gurevych, „Beyond the stars: exploiting free-text“')

@@ -21,7 +21,6 @@
     Recognition, 29(10):1673 – 1687, 1996.
 """
 
-import functools
 
 import configo
 import geostrat
@@ -84,7 +83,7 @@ def extract(content) -> iamraw.BibliographyReferences:
     return result
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def split_bibliography(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> split_bibliography('Vogel-Sprott,  M. (1997). Is behavioral  tolerance  '
@@ -119,7 +118,7 @@ def split_bibliography(raw: str) -> iamraw.BibliographyReference:
 MAGIC_LENGTH_MIN = configo.HV_INT_PLUS(default=120)
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse_last(raw: str) -> iamraw.BibliographyReference:
     # TODO: NOT VERY SMART
     if len(raw) < MAGIC_LENGTH_MIN:

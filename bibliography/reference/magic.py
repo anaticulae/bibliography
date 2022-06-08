@@ -14,14 +14,14 @@ Bergsträsser, Gotthelf, Einführung in die semitischen Sprachen, München:
         Max Hueber Verlag 1963.
 """
 
-import functools
 import re
 
 import german
 import iamraw
+import utila
 
 
-@functools.lru_cache(maxsize=4096)
+@utila.cacheme
 def parse(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> parse('Bergsträsser, Gotthelf, Einführung in die semitischen Sprachen, München: Max Hueber Verlag 1963.')
