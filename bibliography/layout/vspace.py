@@ -104,12 +104,8 @@ def select_best(items: list, selector=len) -> typing.Any:
         item for item in items if bibliography.judge.judge([item]) and
         not bibliography.layout.utils.invalid_extraction(item)
     ]
-    # TODO: REPLACE WITH UTILA CODE
-    if not items:
-        return []
-    best = items[0]
-    for item in items[1:]:
-        if selector(item) < selector(best):
-            continue
-        best = item
+    best = utila.longest(
+        items=items,
+        key=selector,
+    )
     return best
