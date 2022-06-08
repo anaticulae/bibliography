@@ -266,10 +266,13 @@ def title_with_link(text: str) -> str:
 
 
 @utila.cacheme
-def invalid_title(title: str, title_min_length: int = TITLE_LENGTH_MIN) -> bool:
+def invalid_title(
+    title: str,
+    title_length_min: int = TITLE_LENGTH_MIN,
+) -> bool:
     if not title:
         return None
-    if len(title) < title_min_length:
+    if len(title) < title_length_min:
         return True
     rate = utila.char_rate(title)
     if rate < 0.7:
