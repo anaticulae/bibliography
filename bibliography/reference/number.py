@@ -26,6 +26,7 @@ and Speech. Technical report, Presto Space, 3 2005.
 
 import re
 
+import configo
 import german
 import iamraw
 import utila
@@ -110,11 +111,13 @@ PATTERN = utila.compiles(r"""
     \.{0,1}
 """)
 
+TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+
 
 @utila.cacheme
 def content(
     raw: str,
-    title_length_min: int = 10,
+    title_length_min: int = TITLE_LENGTH_MIN,
 ) -> iamraw.BibliographyReference:
     """\
     >>> content('W. Abmayr. Einführung in die digitale Bildverarbeitung. B.G. Teubner Stuttgart, 1994.')

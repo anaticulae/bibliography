@@ -38,6 +38,7 @@ Examples
 
 """
 
+import configo
 import german
 import iamraw
 import utila
@@ -247,7 +248,7 @@ def parse_longtext_less_strict(content: str) -> iamraw.BibliographyReference:
     return None
 
 
-TITLE_LENGTH_MIN = 10
+TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
 
 
 @utila.cacheme
