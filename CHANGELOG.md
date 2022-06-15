@@ -2,6 +2,17 @@
 
 Every noteable change is logged here.
 
+## v0.2.2
+
+### Feature
+
+* improve tech parser (d1fbc60dd1cd)
+* improve regex lookup (346e36c3cc82)
+
+### Fix
+
+* add missing import (36b55662f0ef)
+
 ## v0.2.1
 
 ### Feature
