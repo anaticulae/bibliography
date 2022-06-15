@@ -11,6 +11,7 @@ import iamraw
 import serializeraw
 import utila
 
+import bibliography.judge
 import bibliography.layout.alternate
 import bibliography.utils
 
