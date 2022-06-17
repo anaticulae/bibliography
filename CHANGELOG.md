@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.2.3
+
+### Feature
+
+* add legacy step to change to new data structure (0ed4c3b06293)
+
 ## v0.2.2
 
 ### Feature
