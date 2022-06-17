@@ -55,6 +55,13 @@ WORKPLAN = [
         ],
         output=('result',),
     ),
+    utila.create_step(
+        'legacy',
+        inputs=[
+            utila.ResultFile('bibliography', 'result_result'),
+        ],
+        output=('result',),
+    ),
 ]
 
 
@@ -81,7 +88,7 @@ def rename(path):
         return path
     path = utila.rreplace(
         path,
-        pattern='bibliography__result_result',
+        pattern='bibliography__legacy_result',
         replace='detector__bibliography_detected',
     )
     return path
