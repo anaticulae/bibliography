@@ -110,13 +110,13 @@ AND = r"""
         |
         %s                        # brackets open
         %s                        # optional month
-        ((?P<year>\d{4,5})([ ]{0,3}\-(?P<yearend>\d{4})){0,1})
+        (\d?(?P<year>(20[012]\d|1[789]\d\d))\d?([ ]{0,3}\-(?P<yearend>(20[012]\d|1[789]\d\d))){0,1})
         [ ]{0,3}
         (?P<number>a|b|c|d){0,1}  # optional char
         %s                        # brackets close
         |
         \({0,1}
-        (?P<simpleyear>\d{4})[ ]{0,2}[a-z]{0,1}[ ]{0,2}:    # see wessels 2007, TODO: DIRTY
+        (?P<simpleyear>(20[012]\d|1[789]\d\d))[ ]{0,2}[a-z]{0,1}[ ]{0,2}:    # see wessels 2007, TODO: DIRTY
         \){0,1}
     )
     [ ]{0,5}                      # remove trailing white spaces
