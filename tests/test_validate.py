@@ -55,6 +55,7 @@ ARCHIVE = utila.join(bibliography.ROOT, 'tests/expected', exist=True)
     pytest.param(power.ORDER107_PDF, '104:108', id='order107'),
 ])
 def test_validate(source, pages, testdir, monkeypatch):
+    utilatest.fixture_requires(source)
     testid = utilatest.testid()
     BibCompare(
         source,
