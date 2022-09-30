@@ -65,7 +65,9 @@ WORKER = utilatest.worker_count(5, onci=len(RESOURCES))
 def extract(resources):
     genex.extract(
         resources,
-        groupme='--pagenumbers --footer',
+        cleanup=True,
+        footnote=True,
+        pagenumber=True,
         worker=WORKER,
     )
 
