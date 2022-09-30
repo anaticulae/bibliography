@@ -54,4 +54,12 @@ pipeline {
             }
         }
     }
+
+    post{
+        failure{
+            sh 'tar -cf generated.tar /tmp/dev/generated'
+            archiveArtifacts artifacts: 'generated.tar'
+            sh 'rm generated.tar'
+        }
+    }
 }
