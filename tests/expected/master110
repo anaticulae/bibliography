@@ -1,12 +1,12 @@
 strategy:alternate
 
 W. Abmayr.
-    Einfuhrung in die digitale Bildverarbeitung
+    Einführung in die digitale Bildverarbeitung
 
 M. Baccar L.A. Gee ; R.C. Gonzalez M.A. Abidi.
     Segmentation of Range Images via Data Fusion and Morphological Watersheds
 
-W. Bailer F. Holler ; A. Messina D. Airola ; P. Schallauer M. Hausenblas.
+W. Bailer F. Höller ; A. Messina D. Airola ; P. Schallauer M. Hausenblas.
     State of the Art of Content Analysis Tools for Video, Audio and Speech
 
 S. Belongie J. Malik J. Puzicha.
@@ -37,7 +37,7 @@ T. Fawcett.
     Roc Graphs: Notes and Practical Considerations for Researchers
 
 R. Ferber.
-    Information Retrieval Suchmodelle und Data-Mining-Verfahren fur Textsammlungen und das Web
+    Information Retrieval Suchmodelle und Data-Mining-Verfahren für Textsammlungen und das Web
 
 P.A. Flach.
     The Geometry of ROC Space: Understanding Machine Learning Metrics through ROC Isometrics
@@ -60,7 +60,7 @@ A. Hoover
 M.K. Hu.
     Visual Pattern Recognition by Moment Invariants
 
-M. Huppi ; D. Kuhn.
+M. Hüppi ; D. Kuhn.
     Chromatische Steinklassifizierung
 
 A.C. Jalba
@@ -88,7 +88,7 @@ V. Kindratenko.
     Development and Application of Image Analysis Techniques for Identification and Classification of Microscopic Particles
 
 S. Lang.
-    Multimodale Aufmerksamkeitssteuerung fur einen mobilen Roboter
+    Multimodale Aufmerksamkeitssteuerung für einen mobilen Roboter
 
 A. D. Lattner.
     Automatische Generierung von Klassifikationsregeln aus Farb-, Textur- und Konturmerkmalen durch Induktives Lernen
@@ -96,14 +96,14 @@ A. D. Lattner.
 o.A.
     NO TITLE
 
-W. Leupold R.Conrad ; S. Volkel G. Große
+W. Leupold R.Conrad ; S. Völkel G. Große
 
 
 S.X. Liao.
     Image Analysis by Moments
 
 M. Martin
-    -Fernandez and C
+    -Fernandez and C
 
 J. Milgram M. Cheriet R. Sabourin.
     Estimating accurate multi-class probabilities with support vector machines
@@ -118,7 +118,7 @@ F. Mokhtarian ; S. Abbasi.
     Automatic Selection of Optimal Views in Multi-view Object Recognition
 
 F. Mokhtarian S. Abbasi J. Kittler.
-    Robust and Ecient Shape Indexing through Curvature scale space
+    Robust and Effcieint Shape Indexing through Curvature scale space
 
 F. Mokhtarian ; M. Bober.
     Curvature Scale Space Representation: Theory, Applications, and MPEG-7 Standardization
@@ -132,10 +132,10 @@ F. Mokhtarian ; R. Suomela.
 Morphological Filtering for Image Enhancement Feature Extraction. P. maragos. Chapter 3.3 for the Book
     The Image and Video Processing Handbook, 2nd edition, Edited by A
 
-A. Nuchter H. Surmann J. Hertzberg.
+A. Nüchter H. Surmann J. Hertzberg.
     Automatic Classification of Objects in 3D Laser Range Scans
 
-A. Nuchter O. Wulf ; K. Lingemann J. Hertzberg ; B. Wagner H. Surmann.
+A. Nüchter O. Wulf ; K. Lingemann J. Hertzberg ; B. Wagner H. Surmann.
     3D Mapping with Semantic Knowledge
 
 G. Pignalberi.
@@ -153,7 +153,7 @@ J. Ricard D. Coeurjolly A. Baskurt.
 M. Safar C. Shahabi X. Sun.
     Image Retrieval By Shape: A Comparative Study
 
-B. Scholkopf ; A.J. Smola.
+B. Schölkopf ; A.J. Smola.
     Learning with Kernels Support Vector Machines, Regularization, Optimization, and Beyond
 
 P. Soille.
@@ -174,8 +174,8 @@ S. Suzuki ; K. Abe.
 M.R. Teague.
     Image Analysis via the General Theory of Moments
 
-L. Thomas F.B. Sachse C.D. Werner O. Dossel.
-    Topologisch veranderbare dreidimensionale aktive konturen in der medizinischen bildverarbeitung
+L. Thomas F.B. Sachse C.D. Werner O. Dössel.
+    Topologisch veränderbare dreidimensionale aktive konturen in der medizinischen bildverarbeitung
 
 V. Vapnik.
     The Nature of Statistical Learning Theory
@@ -186,7 +186,7 @@ K. Veropoulos C. Campbell N. Cristianini.
 P. Viola ; M.J. Jones.
     Image Analysis via the General Theory of Moments
 
-A. Wallin ; O. Kubler.
+A. Wallin ; O. Kübler.
     Complete Sets of Complex Zernike Moment Invariants and the Role of the Pseudoinvariants
 
 H. Wang ; D. Suter.
