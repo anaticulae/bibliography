@@ -10,6 +10,7 @@
 import genex
 import power
 import pytest
+import utilatest
 
 import bibliography
 
@@ -18,8 +19,6 @@ pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 power.setup(bibliography.ROOT)
 
 PACKAGE = bibliography.PROCESS
-
-WORKER = 4
 
 RESOURCES = [
     (power.BACHELOR037_PDF, '33:37'),
@@ -59,6 +58,8 @@ RESOURCES = [
     power.MASTER075_PDF,
     power.MASTER098_PDF,
 ]
+
+WORKER = utilatest.worker_count(5, onci=len(RESOURCES))
 
 
 def extract(resources):
