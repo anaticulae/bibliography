@@ -2,6 +2,22 @@
 
 Every noteable change is logged here.
 
+## v0.3.0 (2022-09-30)
+
+### Feature
+
+* use new data (bd315c6f8cf7)
+* shrink year (85ce68be0eeb)
+
+### Chore
+
+* archive generated data if build fails (917d09d86d4e)
+* use modern resource generator (dc185420918a)
+* increase worker count on CI (ade2ffc5132a)
+* remove defaults (7efd2ba050b0)
+* add Jenkinsfile (0e09c328df3c)
+* upgrade requirements.txt (f909c2b53106)
+
 ## v0.2.3
 
 ### Feature
