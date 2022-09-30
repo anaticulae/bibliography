@@ -54,27 +54,27 @@ ARCHIVE = utila.join(bibliography.ROOT, 'tests/expected', exist=True)
     pytest.param(power.MASTER155_PDF, '75:85', id='master155'),
     pytest.param(power.ORDER107_PDF, '104:108', id='order107'),
 ])
-def test_validate(source, pages, testdir, monkeypatch):
+def test_validate(source, pages, td, mp):
     utilatest.fixture_requires(source)
     testid = utilatest.testid()
     BibCompare(
         source,
         pages,
         testid,
-        testdir,
-        monkeypatch,
+        td,
+        mp,
     ).evaluate()
 
 
 class BibCompare(utilatest.BaseLiner):
 
-    def __init__(self, source, pages, index, testdir, monkeypatch):
+    def __init__(self, source, pages, index, td, mp):
         super().__init__(
-            program=functools.partial(tests.run, monkeypatch=monkeypatch),
+            program=functools.partial(tests.run, mp=mp),
             step='',
             source=source,
             pages=pages,
-            workdir=testdir.tmpdir,
+            workdir=td.tmpdir,
             archive=ARCHIVE,
             loader=serializeraw.load_bibliography_reference,
             index=index,

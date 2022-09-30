@@ -15,10 +15,10 @@ import tests
 
 
 @utilatest.requires(power.BACHELOR037_PDF)
-def test_bib_headline_bachelor037(testdir, monkeypatch):
+def test_bib_headline_bachelor037(td, mp):
     source = power.link(power.BACHELOR037_PDF)
-    cmd = f'-i {source} -o {testdir.tmpdir} --pages=33'
-    tests.run(cmd, monkeypatch=monkeypatch)
-    table = serializeraw.load_bibliography_reference(content=testdir.tmpdir)
+    cmd = f'-i {source} -o {td.tmpdir} --pages=33'
+    tests.run(cmd, mp=mp)
+    table = serializeraw.load_bibliography_reference(content=td.tmpdir)
     assert table.headline == 'Literaturangaben'
     assert table.pdfpages == (33,)

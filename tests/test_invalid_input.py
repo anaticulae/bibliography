@@ -14,12 +14,12 @@ import tests
 
 
 @utilatest.requires(power.BACHELOR056_PDF)
-def test_unconnected_pages(testdir, monkeypatch, capsys):
+def test_unconnected_pages(td, mp, capsys):
     source = power.link(power.BACHELOR056_PDF)
     pages = '1,2,3,6,7,8'  # invalid pages input
 
-    command = f'-i {source} -o {testdir.tmpdir} --pages={pages}'
-    tests.run(command, monkeypatch=monkeypatch)
+    command = f'-i {source} -o {td.tmpdir} --pages={pages}'
+    tests.run(command, mp=mp)
 
     stdout = utilatest.stdout(capsys)
     assert 'more than one potential bib section' in stdout
