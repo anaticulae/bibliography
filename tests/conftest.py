@@ -64,11 +64,8 @@ RESOURCES = [
 def extract(resources):
     genex.extract(
         resources,
-        destination=power.generated(),
         groupme='--pagenumbers --footer',
-        pages=':',
         worker=WORKER,
-        base=power.REPOSITORY,
     )
 
 
