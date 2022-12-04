@@ -1,3 +1,5 @@
+@Library('caelum@108f81811f363bfda4a3fd6110a5c190e56b2fa0') _
+
 pipeline {
     agent {
         docker {
