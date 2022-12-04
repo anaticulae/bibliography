@@ -10,7 +10,7 @@
 import iamraw
 import pytest
 
-import bibliography.reference.freeand as freeand
+from bibliography.reference import freeand
 
 LONGTEXT = """\
 Rumph, H.-J., Hapke, U. & John, U. (1997). Lübecker Alkoholabhängigkeits- und

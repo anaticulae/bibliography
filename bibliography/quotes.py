@@ -48,7 +48,7 @@ def first_quote(text: str) -> int:
     parsed = collect_quotations(text)
     if not parsed:
         return None
-    first = min([item[1] for item in parsed])
+    first = min((item[1] for item in parsed))
     return first
 
 
