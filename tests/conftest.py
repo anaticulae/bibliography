@@ -14,13 +14,9 @@ import utilatest
 from utilatest import mp  # pylint:disable=W0611
 from utilatest import td  # pylint:disable=W0611
 
-import bibliography
-
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
-power.setup(bibliography.ROOT)
-
-PACKAGE = bibliography.PROCESS
+power.setup(__file__)
 
 RESOURCES = [
     (power.BACHELOR037_PDF, '33:37'),
