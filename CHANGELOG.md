@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.3.1 (2022-12-04)
+
+### Chore
+
+* remove bibliography dependency (59d2ece3be9e)
+* use quick installer (6ae88e153cd6)
+* upgrade requirements.txt (5d8453eeba64)
+* upgrade pipeline (7cf13ad8e2cd)
+* add pipe library (7be0b4d5caf7)
+
 ## v0.3.0 (2022-09-30)
 
 ### Feature
