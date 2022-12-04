@@ -10,6 +10,7 @@
 import genex
 import power
 import pytest
+import resinf
 import utilatest
 from utilatest import mp  # pylint:disable=W0611
 from utilatest import td  # pylint:disable=W0611
@@ -48,7 +49,7 @@ RESOURCES = [
     (power.MASTER148_PDF, '109:113'),
     (power.MASTER155_PDF, '78:85'),
     (power.ORDER107_PDF, '90:108'),
-    genex.todo(
+    resinf.todo(
         power.BACHELOR067_PDF,
         pages='63:66',
         rawmaker='--char_margin=1.1',
