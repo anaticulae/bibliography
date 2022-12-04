@@ -30,16 +30,12 @@ import bibliography.layout.alternate
 import bibliography.layout.utils
 
 
-def extracts(
-    navigators: texmex.PageTextContentNavigator
-) -> iamraw.BibliographyReferences:
+def extracts(navigators: texmex.PTCN) -> iamraw.BibliographyReferences:
     glob = optimize_global(navigators)
     return glob
 
 
-def optimize_global(
-    navigators: texmex.PageTextContentNavigator
-) -> iamraw.BibliographyReferences:
+def optimize_global(navigators: texmex.PTCN) -> iamraw.BibliographyReferences:
     results = []
     for factor in MAXDISTANCE_FACTOR:
         adjusted = lambda x: factor * MAXDISTANCE(x)  # pylint:disable=cell-var-from-loop
@@ -65,7 +61,7 @@ def extract(
     )
     grouped = [[navigator[item] for item in group] for group in grouped]
     result = bibliography.layout.alternate.extract(grouped)
-    result = utila.not_none(result)
+    result = utila.notnone(result)
     # update pdf page number
     for item in result:
         item.raw_pdfpage = navigator.page

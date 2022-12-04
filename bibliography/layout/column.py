@@ -17,7 +17,7 @@ import bibliography.layout.vspace
 import bibliography.machine.runtime
 
 
-def extracts(navigators: texmex.PageTextNavigators):
+def extracts(navigators: texmex.PTNs):
     for strategy in [extract, double_column]:
         result = []
         for navigator in navigators:
@@ -33,7 +33,7 @@ def extracts(navigators: texmex.PageTextNavigators):
     return []
 
 
-def extract(content: texmex.PageTextNavigator) -> iamraw.BibliographyReferences:
+def extract(content: texmex.PTN) -> iamraw.BibliographyReferences:
     layouted = geostrat.parse(
         content,
         column_elements_min=4,
@@ -61,14 +61,14 @@ def extract(content: texmex.PageTextNavigator) -> iamraw.BibliographyReferences:
     return result
 
 
-def double_column(content: texmex.PageTextNavigator) -> iamraw.BibliographyReferences: # yapf:disable
+def double_column(content: texmex.PTN) -> iamraw.BibliographyReferences: # yapf:disable
     parsed = geostrat.parse(content, column_count=2)
     if parsed is None:
         return None
     result = []
     for column in parsed:
-        navigator = texmex.PageTextNavigator()
+        navigator = texmex.PTN()
         navigator.data = column
         parsed = bibliography.layout.vspace.extracts([navigator])
-        result.extend(utila.flatten(parsed))
+        result.extend(utila.flat(parsed))
     return result

@@ -28,7 +28,7 @@ def judge(pages: list) -> list:
     if not counted:
         return []
     invalid = 0
-    for item in utila.flatten(pages):
+    for item in utila.flat(pages):
         if item is None or invalid_single(item):
             invalid += 1
     # determine invalid ratio

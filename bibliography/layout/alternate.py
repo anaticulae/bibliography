@@ -39,7 +39,7 @@ WORD_COUNT_MIN = configo.HV_INT_PLUS(default=2)
 ERROR_LEVEL_MAX = configo.HV_PERCENT_PLUS(default=25.0)
 
 
-def extracts(items: texmex.PageTextNavigators) -> iamraw.BibliographyReferences:
+def extracts(items: texmex.PTNs) -> iamraw.BibliographyReferences:
     result = []
     config = geostrat.ParserConfig(
         min_content_length=CONTENT_LENGTH_MIN,

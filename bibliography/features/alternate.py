@@ -42,7 +42,7 @@ def work(  # pylint:disable=R0914
     best = utila.longest(parts)
     # remove None items
     without_empty = [utila.notnone(page) for page in best]
-    references = utila.flatten(without_empty)
+    references = utila.flat(without_empty)
     headline, pdfpages = None, None
     if references:
         pdfpages = tuple(sorted({item.raw_pdfpage for item in references}))

@@ -31,7 +31,7 @@ def test_parse_bibliography_master116_page_x(pages, expected):
         pages=pages,
     )
     parsed = bibliography.layout.alternate.extracts(navigators)
-    parsed = utila.flatten(parsed)
+    parsed = utila.flat(parsed)
     assert len(parsed) == expected, str(parsed)
 
 
@@ -45,7 +45,7 @@ def test_parse_bibliography_hurenkind():
         pages=pages,
     )
     parsed = bibliography.layout.alternate.extracts(navigators)
-    parsed = utila.flatten(parsed)
+    parsed = utila.flat(parsed)
     assert len(parsed) == expected, str(parsed)
 
 

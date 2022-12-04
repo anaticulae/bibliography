@@ -146,7 +146,7 @@ def numbers(content: str) -> iamraw.BibliographyReferences:
 
 
 def parse_single(page: str):
-    number = utila.parse_numbers(page)[0]
+    number = utila.parse_ints(page)[0]
     follow = page.replace(str(number), '').strip()
     return number, follow
 
