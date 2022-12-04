@@ -17,9 +17,9 @@ PACKAGES = [
     'bibliography.machine',
     'bibliography.reference',
 ]
-ENTRY_POINTS = {
-    'console_scripts': ['bibliography = bibliography.cli:main',],
-}
+ENTRY_POINTS = dict(console_scripts=[
+    'bibliography = bibliography.cli:main',
+])
 
 if __name__ == "__main__":
     utila.install(__file__)
