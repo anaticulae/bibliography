@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.3.4 (2023-01-04)
+
+### Chore
+
+* upgrade requirements.txt (ab8d843d6fdf)
+
 ## v0.3.3 (2023-01-04)
 
 ### Documentation
