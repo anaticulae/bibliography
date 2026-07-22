@@ -7,58 +7,58 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 import bibliography
 
 DESCRIPTION = ''
 
 WORKPLAN = [
-    utila.create_step(
+    utilo.create_step(
         'alternate',
         inputs=[
-            utila.ResultFile('rawmaker', 'oneline_text_text'),
-            utila.ResultFile('rawmaker', 'oneline_text_positions'),
-            utila.ResultFile('rawmaker', 'border_pages'),
-            utila.ResultFile('footnote', 'result_result'),
+            utilo.ResultFile('rawmaker', 'oneline_text_text'),
+            utilo.ResultFile('rawmaker', 'oneline_text_positions'),
+            utilo.ResultFile('rawmaker', 'border_pages'),
+            utilo.ResultFile('footnote', 'result_result'),
         ],
         output=('alternate',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'column',
         inputs=[
-            utila.ResultFile('rawmaker', 'text_text'),
-            utila.ResultFile('rawmaker', 'text_positions'),
-            utila.ResultFile('rawmaker', 'oneline_text_text'),
-            utila.ResultFile('rawmaker', 'oneline_text_positions'),
-            utila.ResultFile('rawmaker', 'border_pages'),
-            utila.ResultFile('footnote', 'result_result'),
+            utilo.ResultFile('rawmaker', 'text_text'),
+            utilo.ResultFile('rawmaker', 'text_positions'),
+            utilo.ResultFile('rawmaker', 'oneline_text_text'),
+            utilo.ResultFile('rawmaker', 'oneline_text_positions'),
+            utilo.ResultFile('rawmaker', 'border_pages'),
+            utilo.ResultFile('footnote', 'result_result'),
         ],
         output=('column',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'vspace',
         inputs=[
-            utila.ResultFile('rawmaker', 'oneline_text_text'),
-            utila.ResultFile('rawmaker', 'oneline_text_positions'),
-            utila.ResultFile('rawmaker', 'border_pages'),
-            utila.ResultFile('footnote', 'result_result'),
+            utilo.ResultFile('rawmaker', 'oneline_text_text'),
+            utilo.ResultFile('rawmaker', 'oneline_text_positions'),
+            utilo.ResultFile('rawmaker', 'border_pages'),
+            utilo.ResultFile('footnote', 'result_result'),
         ],
         output=('vspace',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'result',
         inputs=[
-            utila.ResultFile('bibliography', 'alternate_alternate'),
-            utila.ResultFile('bibliography', 'column_column'),
-            utila.ResultFile('bibliography', 'vspace_vspace'),
+            utilo.ResultFile('bibliography', 'alternate_alternate'),
+            utilo.ResultFile('bibliography', 'column_column'),
+            utilo.ResultFile('bibliography', 'vspace_vspace'),
         ],
         output=('result',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'legacy',
         inputs=[
-            utila.ResultFile('bibliography', 'result_result'),
+            utilo.ResultFile('bibliography', 'result_result'),
         ],
         output=('result',),
     ),
@@ -66,11 +66,11 @@ WORKPLAN = [
 
 
 def main():
-    utila.featurepack(
+    utilo.featurepack(
         workplan=WORKPLAN,
         root=bibliography.ROOT,
         featurepackage='bibliography.features',
-        config=utila.FeaturePackConfig(
+        config=utilo.FeaturePackConfig(
             description=DESCRIPTION,
             multiprocessed=True,
             name=bibliography.PROCESS,
@@ -86,7 +86,7 @@ def rename(path):
     if not isinstance(path, str):
         path = [rename(item) for item in path]
         return path
-    path = utila.rreplace(
+    path = utilo.rreplace(
         path,
         pattern='bibliography__legacy_result',
         replace='detector__bibliography_detected',

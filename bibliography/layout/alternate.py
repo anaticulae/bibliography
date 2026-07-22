@@ -21,22 +21,22 @@
     Recognition, 29(10):1673 – 1687, 1996.
 """
 
-import configo
+import configos
 import geostrat
 import iamraw
 import texmex
-import utila
+import utilo
 
 import bibliography.reference.freeand
 import bibliography.reference.magic
 import bibliography.reference.number
 import bibliography.reference.tech
 
-CONTENT_LENGTH_MIN = configo.HV_INT_PLUS(default=15)
+CONTENT_LENGTH_MIN = configos.HV_INT_PLUS(default=15)
 
-WORD_COUNT_MIN = configo.HV_INT_PLUS(default=2)
+WORD_COUNT_MIN = configos.HV_INT_PLUS(default=2)
 
-ERROR_LEVEL_MAX = configo.HV_PERCENT_PLUS(default=25.0)
+ERROR_LEVEL_MAX = configos.HV_PERCENT_PLUS(default=25.0)
 
 
 def extracts(items: texmex.PTNs) -> iamraw.BibliographyReferences:
@@ -73,7 +73,7 @@ def extract(content) -> iamraw.BibliographyReferences:
         for line in group:
             # TODO: REMOVE THIS HACK LATER
             line.text = line.text.rstrip()
-            line.text += utila.NEWLINE
+            line.text += utilo.NEWLINE
         raw = texmex.connect_text(group)
         parsed = split_bibliography(raw)
         if not parsed:
@@ -82,7 +82,7 @@ def extract(content) -> iamraw.BibliographyReferences:
     return result
 
 
-@utila.cacheme
+@utilo.cacheme
 def split_bibliography(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> split_bibliography('Vogel-Sprott,  M. (1997). Is behavioral  tolerance  '
@@ -100,7 +100,7 @@ def split_bibliography(raw: str) -> iamraw.BibliographyReference:
         parse_last,
     )
     raw = raw.strip()
-    raw = utila.simplify_chars(raw)
+    raw = utilo.simplify_chars(raw)
     splitted = bibliography.reference.number.split(raw)
     if splitted:
         raw = splitted[1]
@@ -114,10 +114,10 @@ def split_bibliography(raw: str) -> iamraw.BibliographyReference:
     return None
 
 
-MAGIC_LENGTH_MIN = configo.HV_INT_PLUS(default=120)
+MAGIC_LENGTH_MIN = configos.HV_INT_PLUS(default=120)
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_last(raw: str) -> iamraw.BibliographyReference:
     # TODO: NOT VERY SMART
     if len(raw) < MAGIC_LENGTH_MIN:
@@ -135,7 +135,7 @@ def parse_last(raw: str) -> iamraw.BibliographyReference:
     result = iamraw.BibliographyReference(
         authors=[authors],
         title=title,
-        year=utila.int_ornone(year),
+        year=utilo.int_ornone(year),
         raw=content,
     )
     return result

@@ -38,21 +38,21 @@ Examples
 
 """
 
-import configo
-import german
+import configos
+import germania
 import iamraw
-import utila
+import utilo
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_longtext(
     content: str,
     pattern=None,
 ) -> iamraw.BibliographyReference:
-    content = utila.normalize_text(content)
+    content = utilo.normalize_text(content)
     pattern = NORMAL if pattern is None else pattern
     raw = content
-    matched = utila.search(pattern, content)
+    matched = utilo.search(pattern, content)
     if not matched:
         return None
     authors = select_authors(matched)
@@ -91,7 +91,7 @@ MONTH = r"""
         \,{0,1}
         [ ]{0,3}
     ){0,1}
-""" % german.MONTH_REGEX
+""" % germania.MONTH_REGEX
 
 # TODO: ADD OPTIONAL BRACKETS TO REMOVE DIRTY SIMPLE YEAR HACK
 # TODO: REMOVE 4,5 HACK: WHEN SUPPORTING HIGHNOTE
@@ -135,10 +135,10 @@ BROKEN_BRACKETS = AND % (r'[\(\[]', MONTH, r'[\]\)]')
 
 NOTITLE = False
 
-TITLE_START = utila.compiles(r'[\.\?\!][ ]')
+TITLE_START = utilo.compiles(r'[\.\?\!][ ]')
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_title(content: str) -> tuple:  # pylint:disable=R0911,R1260
     """Increase number of valid dots to parse long title with a lot of dots.
 
@@ -177,23 +177,23 @@ def parse_title(content: str) -> tuple:  # pylint:disable=R0911,R1260
     return None
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_hyperlinks(content):
-    hyperlinks = german.hyperlink(content)
+    hyperlinks = germania.hyperlink(content)
     if hyperlinks:
         for hyperlink in hyperlinks:
             content = content.replace(hyperlink, '')
     if len(hyperlinks) > 1:
         # TODO: VERIFY THIS
-        utila.debug(f'more than one link parsed: {content}')
+        utilo.debug(f'more than one link parsed: {content}')
     return hyperlinks, content
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_pages(content):
-    parsed = german.pages(content)
+    parsed = germania.pages(content)
     if not parsed:
-        parsed = german.pages_complex(content)
+        parsed = germania.pages_complex(content)
     if parsed:
         content = content.replace(parsed[0], '')
     page, pageend = None, None
@@ -204,9 +204,9 @@ def parse_pages(content):
     return page, pageend, content
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_accessed(content):
-    accessed = german.accessed(content)
+    accessed = germania.accessed(content)
     for access in accessed:
         content = content.replace(access[1], '')
     return accessed, content
@@ -232,13 +232,13 @@ def select_authors(matched):
     authors: str = matched['authors']
     # backup strategy for solving typos
     authors = authors.replace(':', '.')
-    authors = german.authors(authors, verbose=True)
+    authors = germania.authors(authors, verbose=True)
     # decide non person authors
-    authors = german.authors_decide(*authors)
+    authors = germania.authors_decide(*authors)
     return authors
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_longtext_less_strict(content: str) -> iamraw.BibliographyReference:
     for pattern in [NORMAL, BROKEN_BRACKETS]:
         parsed = parse_longtext(content, pattern=pattern)
@@ -248,16 +248,16 @@ def parse_longtext_less_strict(content: str) -> iamraw.BibliographyReference:
     return None
 
 
-TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+TITLE_LENGTH_MIN = configos.HV_INT_PLUS(default=10)
 
 
-@utila.cacheme
+@utilo.cacheme
 def title_with_link(text: str) -> str:
     """\
     >>> title_with_link('Zentrale Orte Raumordnungsprogramm (NÖ) https://www.ris.bka.gv.at/LRNI_1992062.pdf (25.01.2018)')
     ('Zentrale Orte Raumordnungsprogramm (NÖ)', 'https://www.ris.bka.gv.at/LRNI_1992062.pdf (25.01.2018)')
     """
-    hypers = german.hyperlink(text)
+    hypers = germania.hyperlink(text)
     if not hypers:
         return None
     started = text.find(hypers[0])
@@ -266,7 +266,7 @@ def title_with_link(text: str) -> str:
     return title, rest
 
 
-@utila.cacheme
+@utilo.cacheme
 def invalid_title(
     title: str,
     title_length_min: int = TITLE_LENGTH_MIN,
@@ -275,7 +275,7 @@ def invalid_title(
         return None
     if len(title) < title_length_min:
         return True
-    rate = utila.char_rate(title)
+    rate = utilo.char_rate(title)
     if rate < 0.7:
         return True
     return False

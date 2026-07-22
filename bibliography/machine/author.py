@@ -7,9 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
+import germania
 import pattern
-import utila
+import utilo
 
 VALIDS = 'u.a. and und & et.al.'.split()
 
@@ -35,7 +35,7 @@ def collect(text: str) -> str:
     return authors
 
 
-NAME = utila.compiles(r'\w{1,3}\.')
+NAME = utilo.compiles(r'\w{1,3}\.')
 
 
 def till_valid(text: str, error_max: int = 1):
@@ -45,7 +45,7 @@ def till_valid(text: str, error_max: int = 1):
     """
     words = text.split()
     valid = [
-        german.isperson(item) or item in VALIDS or NAME.match(item)
+        germania.isperson(item) or item in VALIDS or NAME.match(item)
         for item in words
     ]
     valid = gap_max(valid, bridge=error_max)

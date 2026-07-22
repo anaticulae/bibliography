@@ -26,15 +26,15 @@ and Speech. Technical report, Presto Space, 3 2005.
 
 import re
 
-import configo
-import german
+import configos
+import germania
 import iamraw
-import utila
+import utilo
 
 import bibliography.quotes
 
 
-@utila.cacheme
+@utilo.cacheme
 def nosplit(raw: str) -> iamraw.BibliographyReference:
     parsed = content(raw)
     if not parsed:
@@ -42,7 +42,7 @@ def nosplit(raw: str) -> iamraw.BibliographyReference:
     return parsed
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> parse('[1] Ahrens, Thomas ; Hanke, Hans-Joachim ; Scheel, Wolfgang: '
@@ -55,13 +55,13 @@ def parse(raw: str) -> iamraw.BibliographyReference:
     number, text = splitted
     parsed = content(text)
     if not parsed:
-        utila.debug(f'could not parse reference:number `{text}`')
+        utilo.debug(f'could not parse reference:number `{text}`')
         return None
     parsed.reference = f'[{number}]'
     return parsed
 
 
-SPLITTER = utila.compiles(r"""
+SPLITTER = utilo.compiles(r"""
     ^
     (?:
         \[(\d{1,4})\]|       # [1] W. Abmayr.
@@ -71,7 +71,7 @@ SPLITTER = utila.compiles(r"""
 """)
 
 
-@utila.cacheme
+@utilo.cacheme
 def split(raw: str) -> tuple:
     """\
     >>> split('[1] W. Abmayr. Einführung in die digitale')
@@ -91,7 +91,7 @@ def split(raw: str) -> tuple:
     return number, data
 
 
-PATTERN = utila.compiles(r"""
+PATTERN = utilo.compiles(r"""
     ^
     (?P<authors>
         (
@@ -111,10 +111,10 @@ PATTERN = utila.compiles(r"""
     \.{0,1}
 """)
 
-TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+TITLE_LENGTH_MIN = configos.HV_INT_PLUS(default=10)
 
 
-@utila.cacheme
+@utilo.cacheme
 def content(
     raw: str,
     title_length_min: int = TITLE_LENGTH_MIN,
@@ -131,11 +131,11 @@ def content(
     if parsed:
         authors = parsed['authors']
         authors = improve_raw(authors)
-        authors = german.authors(authors)
-        authors = german.authors_decide(authors)
+        authors = germania.authors(authors)
+        authors = germania.authors_decide(authors)
         year = int(parsed['year'])
         middle = parsed['middle']
-        raw = utila.extract_match(parsed)
+        raw = utilo.extract_match(parsed)
     else:
         # backup strategy
         try:
@@ -162,7 +162,7 @@ def content(
     return result
 
 
-@utila.cacheme
+@utilo.cacheme
 def improve_raw(authors: str) -> str:
     """\
     >>> improve_raw('Grunwald Armin; Gerhard Banse; Christopher Coenen und Leonhard Hennen')
@@ -174,7 +174,7 @@ def improve_raw(authors: str) -> str:
     return authors
 
 
-@utila.cacheme
+@utilo.cacheme
 def search_author(raw: str):
     """\
     >>> search_author('N. Jakob, S. H. Weber, M. C. Müller, I. Gurevych, „Beyond the stars: exploiting free-text“')
@@ -184,13 +184,13 @@ def search_author(raw: str):
     if removed is None:
         return None
     # TODO: HACK Y COLLECTOR
-    possible_endings = utila.findindex(removed, ' ')
+    possible_endings = utilo.findindex(removed, ' ')
     best = []
     for index in possible_endings:
         text = removed[0:index].replace(',', ';')
-        authors = german.authors(text)
+        authors = germania.authors(text)
         authors = [item[0].split() for item in authors]
-        authors: list = german.authors_decide(authors)
+        authors: list = germania.authors_decide(authors)
         # remove noperson
         authors = [item for item in authors if isinstance(item, iamraw.Person)]
         if len(authors) > len(best):

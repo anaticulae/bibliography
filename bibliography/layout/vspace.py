@@ -20,10 +20,10 @@ Global vs Local Optimization
 
 import typing
 
-import configo
+import configos
 import iamraw
 import texmex
-import utila
+import utilo
 
 import bibliography.judge
 import bibliography.layout.alternate
@@ -45,7 +45,7 @@ def optimize_global(navigators: texmex.PTCN) -> iamraw.BibliographyReferences:
             current.extend(extracted)
         results.append(current)
     best = select_best(results)
-    result = utila.groupby_x(best, selector=lambda x: x.raw_pdfpage)
+    result = utilo.groupby_x(best, selector=lambda x: x.raw_pdfpage)
     return result
 
 
@@ -61,24 +61,24 @@ def extract(
     )
     grouped = [[navigator[item] for item in group] for group in grouped]
     result = bibliography.layout.alternate.extract(grouped)
-    result = utila.notnone(result)
+    result = utilo.notnone(result)
     # update pdf page number
     for item in result:
         item.raw_pdfpage = navigator.page
     return result
 
 
-MAXDISTANCE = configo.HolyTable(
+MAXDISTANCE = configos.HolyTable(
     items=[
         (12.0, 15.0),  # LOWER LIMIT
         (14.5, 30.0),
         (15.96, 35),
         (60.0, 50.0),  # UPPER LIMIT
     ],
-    strategy=utila.Strategy.LOWER,
+    strategy=utilo.Strategy.LOWER,
 )
 
-MAXDISTANCE_FACTOR = configo.HolyList([
+MAXDISTANCE_FACTOR = configos.HolyList([
     0.8,
     0.85,
     0.90,
@@ -100,7 +100,7 @@ def select_best(items: list, selector=len) -> typing.Any:
         item for item in items if bibliography.judge.judge([item]) and
         not bibliography.layout.utils.invalid_extraction(item)
     ]
-    best = utila.longest(
+    best = utilo.longest(
         items=items,
         key=selector,
     )

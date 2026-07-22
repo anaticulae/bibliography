@@ -7,7 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 
 def collect_quotations(text: str) -> list:
@@ -15,7 +15,7 @@ def collect_quotations(text: str) -> list:
     >>> collect_quotations('N. Alsaedi, P. Burnap, „Arabic event ‘detection’ in social media“')
     [('„Arabic event ‘detection’ in social media“', 23, 65), ('‘detection’', 37, 48)]
     """
-    collected = utila.findindexs(text, '„“”‘’')
+    collected = utilo.findindexs(text, '„“”‘’')
     good = []
     for length in range(len(collected), 0, -1):
         for x in range(len(collected) - length):

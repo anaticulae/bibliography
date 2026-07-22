@@ -7,15 +7,15 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import configo
+import configos
 import iamraw
-import utila
+import utilo
 
 import bibliography.utils
 
-TITLE_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+TITLE_LENGTH_MIN = configos.HV_INT_PLUS(default=10)
 
-INVALID_MAX = configo.HolyTable(items=[
+INVALID_MAX = configos.HolyTable(items=[
     (5, 0),
     (15, 0),
     (30, 3 / 30),
@@ -28,7 +28,7 @@ def judge(pages: list) -> list:
     if not counted:
         return []
     invalid = 0
-    for item in utila.flat(pages):
+    for item in utilo.flat(pages):
         if item is None or invalid_single(item):
             invalid += 1
     # determine invalid ratio

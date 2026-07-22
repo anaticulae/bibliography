@@ -7,11 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 import pytest
 import serializeraw
-import utila
-import utilatest
+import utilo
+import utilotest
 
 import bibliography.layout.alternate
 
@@ -22,35 +22,35 @@ import bibliography.layout.alternate
     (99, 15),
     (100, 3),
 ])
-@utilatest.longrun
-@utilatest.requires(power.MASTER116_PDF)
+@utilotest.longrun
+@utilotest.requires(hoverpower.MASTER116_PDF)
 def test_parse_bibliography_master116_page_x(pages, expected):
     navigators = serializeraw.ptn_frompath(
-        power.link(power.MASTER116_PDF),
+        hoverpower.link(hoverpower.MASTER116_PDF),
         prefix='oneline',
         pages=pages,
     )
     parsed = bibliography.layout.alternate.extracts(navigators)
-    parsed = utila.flat(parsed)
+    parsed = utilo.flat(parsed)
     assert len(parsed) == expected, str(parsed)
 
 
-@utilatest.requires(power.BACHELOR056_PDF)
+@utilotest.requires(hoverpower.BACHELOR056_PDF)
 def test_parse_bibliography_hurenkind():
     expected = 7  # VALIDATED; 8 with item from before, but item in not completed
     pages = (51,)
     navigators = serializeraw.ptn_frompath(
-        power.link(power.BACHELOR056_PDF),
+        hoverpower.link(hoverpower.BACHELOR056_PDF),
         prefix='oneline',
         pages=pages,
     )
     parsed = bibliography.layout.alternate.extracts(navigators)
-    parsed = utila.flat(parsed)
+    parsed = utilo.flat(parsed)
     assert len(parsed) == expected, str(parsed)
 
 
 # yapf:disable
-ALTERNATE = utila.splitlines("""\
+ALTERNATE = utilo.splitlines("""\
 Adloff, Frank: Zivilgesellschaft – Theorie und politische Praxis.
  Frankfurt/Main: Campus Verlag, 2005.
 
@@ -59,7 +59,7 @@ Aktion Demenz e.V.: Eine Kommune auf dem Weg: Arnsberg.
 """, pattern='\n\n')
 # yapf:enable
 PARAMETERS = [
-    pytest.param(item, id=utilatest.simple(item)) for item in ALTERNATE
+    pytest.param(item, id=utilotest.simple(item)) for item in ALTERNATE
 ]
 
 

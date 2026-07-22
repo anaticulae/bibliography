@@ -10,7 +10,7 @@
 import geostrat
 import iamraw
 import texmex
-import utila
+import utilo
 
 import bibliography.layout.utils
 import bibliography.layout.vspace
@@ -70,5 +70,5 @@ def double_column(content: texmex.PTN) -> iamraw.BibliographyReferences: # yapf:
         navigator = texmex.PTN()
         navigator.data = column
         parsed = bibliography.layout.vspace.extracts([navigator])
-        result.extend(utila.flat(parsed))
+        result.extend(utilo.flat(parsed))
     return result

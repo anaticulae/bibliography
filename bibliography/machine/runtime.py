@@ -7,7 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
+import germania
 import iamraw
 import pattern
 
@@ -17,24 +17,24 @@ import bibliography.machine.title
 IN = pattern.Regex(regex=r'IN:[^\*]+', name='in-pattern')
 
 PATTERN = (
-    german.issn,
-    german.isbn,
-    german.doi,
-    german.accessed,
-    german.pagenumbers,
-    german.hyperlink,
-    german.dates_master,
+    germania.issn,
+    germania.isbn,
+    germania.doi,
+    germania.accessed,
+    germania.pagenumbers,
+    germania.hyperlink,
+    germania.dates_master,
     'URL:',
     pattern.SimpleCleanup,
     IN,
-    german.years,
+    germania.years,
     pattern.SimpleCleanup,
     bibliography.machine.title.Titles,
     bibliography.machine.author.SmartAuthor,
     bibliography.machine.title.TitlesBetween,
 )
 
-IMPROVES = (german.href_magic,)
+IMPROVES = (germania.href_magic,)
 
 
 def reference(raw: str) -> iamraw.BibliographyReference:
@@ -49,7 +49,7 @@ def reference(raw: str) -> iamraw.BibliographyReference:
     result = iamraw.BibliographyReference(raw=raw)
     authors = data.get('authors', None)
     if authors:
-        result.authors = german.authors_decide(german.authors(authors))
+        result.authors = germania.authors_decide(germania.authors(authors))
     title = data.get('title', None)
     if title:
         if not isinstance(title, str):

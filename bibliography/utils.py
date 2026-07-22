@@ -7,9 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import elements
+import elementae
 import serializeraw
-import utila
+import utilo
 
 
 def count(pages: list) -> int:
@@ -37,13 +37,13 @@ def search_headline(
     )[0]
     for line in textnavigator[0:8]:
         line: str = line.text.strip()
-        headline = elements.parse_headline(line)
+        headline = elementae.parse_headline(line)
         if headline is None:
             continue
         headline = headline[0]
-        if not utila.verysimilar(
+        if not utilo.verysimilar(
                 current=headline,
-                expected=elements.BIBLIOGRAPHY,
+                expected=elementae.BIBLIOGRAPHY,
         ):
             continue
         return headline
@@ -55,7 +55,7 @@ def prepare_pages(pages) -> list:
     pageslist = [None]
     # ensure to have connected pages
     if pages:
-        pageslist = utila.groupby_diff(pages)
+        pageslist = utilo.groupby_diff(pages)
     if len(pageslist) > 1:
-        utila.log(f'more than one potential bib section: {len(pageslist)}')
+        utilo.log(f'more than one potential bib section: {len(pageslist)}')
     return pageslist

@@ -9,7 +9,7 @@
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import bibliography.layout.column
 import bibliography.utils
@@ -35,13 +35,13 @@ def work(  # pylint:disable=R0914
             pages=selected,
         )
         extracted = bibliography.layout.column.extracts(textnavigators)
-        utila.debug(f'column:    {bibliography.utils.count(extracted)}')
+        utilo.debug(f'column:    {bibliography.utils.count(extracted)}')
         parts.append(extracted)
     # select best bib ref
-    best = utila.longest(parts)
+    best = utilo.longest(parts)
     # remove None items
-    without_empty = [utila.notnone(page) for page in best]
-    references = utila.flat(without_empty)
+    without_empty = [utilo.notnone(page) for page in best]
+    references = utilo.flat(without_empty)
     headline, pdfpages = None, None
     if references:
         pdfpages = tuple(sorted({item.raw_pdfpage for item in references}))

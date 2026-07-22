@@ -14,16 +14,16 @@ Bergsträsser, Gotthelf, Einführung in die semitischen Sprachen, München:
         Max Hueber Verlag 1963.
 """
 
-import german
+import germania
 import iamraw
-import utila
+import utilo
 
-YEAR = utila.compiles(r'(\d{4})\.$')
+YEAR = utilo.compiles(r'(\d{4})\.$')
 
 NO_AUTHOR = [['']]
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse(raw: str) -> iamraw.BibliographyReference:
     """\
     >>> parse('Bergsträsser, Gotthelf, Einführung in die semitischen Sprachen, München: Max Hueber Verlag 1963.')
@@ -47,11 +47,11 @@ def parse(raw: str) -> iamraw.BibliographyReference:
     if not collected:
         return None
     collected: str = ','.join(collected)
-    authors, authors_raw = german.authors(collected, verbose=True)
+    authors, authors_raw = germania.authors(collected, verbose=True)
     if authors == NO_AUTHOR:
         # HACK: remove empty authors
         return None
-    authors = german.authors_decide(authors)
+    authors = germania.authors_decide(authors)
     year_raw = YEAR.search(raw)
     year = int(year_raw[1]) if year_raw else None
     rest = rest.replace(authors_raw, '')

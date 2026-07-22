@@ -13,10 +13,10 @@
 BibliographyReference(title='Privacy no longer a social norm, says Facebook founder'...)
 """
 
-import configo
-import german
+import configos
+import germania
 import iamraw
-import utila
+import utilo
 
 import bibliography.label
 import bibliography.quotes
@@ -24,7 +24,7 @@ import bibliography.reference
 import bibliography.reference.freeand
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_single_row(content: str) -> iamraw.BibliographyReference:
     matched = bibliography.label.parses(content)
     if not matched:
@@ -35,7 +35,7 @@ def parse_single_row(content: str) -> iamraw.BibliographyReference:
         # Mostly a result of failure in layout grouping. This can
         # happen if a wrong layout grouping mechanism is used. This is not
         # a problem cause we have more than one strategy.
-        # utila.debug('parses more than one reference, '
+        # utilo.debug('parses more than one reference, '
         #             f'skip tech result: {content}')
         return None
     matched: iamraw.BibliographyReference = matched[0]
@@ -52,7 +52,7 @@ def parse_single_row(content: str) -> iamraw.BibliographyReference:
     return matched
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_longtext(content: str) -> iamraw.BibliographyReference:
     """\
     >>> parse_longtext('Todd D. Jick. “Mixing Qualitative and Quantitative '
@@ -68,7 +68,7 @@ def parse_longtext(content: str) -> iamraw.BibliographyReference:
     >>> parse_longtext('DOYLE, Ron (20.5.2010): You 2.0. Is technology changing who we are? http://www.psychologytoday.com/')
     BibliographyReference(title='You 2.0. Is technology changing who we are?'...)
     """
-    content = utila.normalize_text(content)
+    content = utilo.normalize_text(content)
     raw = content
     parsed = parse_first(content)
     if not parsed:
@@ -86,12 +86,12 @@ def parse_longtext(content: str) -> iamraw.BibliographyReference:
         title, rest = rest, ''
     title = title.strip(' :,;.')
     authors = authors.strip()
-    authors = german.authors(authors)
+    authors = germania.authors(authors)
     # disable non person authors
-    authors = german.authors_decide(authors)
-    page = german.pages(rest)
+    authors = germania.authors_decide(authors)
+    page = germania.pages(rest)
     if page:
-        rest = utila.ghost_replace(rest, page[0])
+        rest = utilo.ghost_replace(rest, page[0])
     # TODO: ADD PUBLISHER EXTRACTOR
     rest = rest.strip()
     publisher = parse_publisher(rest)
@@ -124,7 +124,7 @@ def parse_year(text: str) -> tuple:
     (2003, 'An overview of commercially')
     """
     # 1. Try to detect complex date
-    dates = german.dates_master(text, verbose=True, sort=False)
+    dates = germania.dates_master(text, verbose=True, sort=False)
     if dates:
         year_first = dates[0][1], dates[0][0][0]
     else:
@@ -152,7 +152,7 @@ def parse_year(text: str) -> tuple:
     return int(year[1]), text
 
 
-FIRST_SPLIT = utila.compiles(r"""
+FIRST_SPLIT = utilo.compiles(r"""
 (
     \((19|20)\d{2}\)|                    # year
     (19\d{2}|20[012]\d)\.|               # year.
@@ -162,16 +162,16 @@ FIRST_SPLIT = utila.compiles(r"""
 )
 """)
 
-AUTHOR_LENGTH_MAX = configo.HV_INT_PLUS(default=160)
+AUTHOR_LENGTH_MAX = configos.HV_INT_PLUS(default=160)
 
-REST_LENGTH_MIN = configo.HV_INT_PLUS(default=30)
+REST_LENGTH_MIN = configos.HV_INT_PLUS(default=30)
 
-REST_TITLE_START_MIN = configo.HV_INT_PLUS(default=20)
+REST_TITLE_START_MIN = configos.HV_INT_PLUS(default=20)
 
-PUBLISHER_LENGTH_MIN = configo.HV_INT_PLUS(default=10)
+PUBLISHER_LENGTH_MIN = configos.HV_INT_PLUS(default=10)
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_first(content: str):
     """\
     >>> parse_first('Put People First. http://www.putpeoplefirst.org.uk/ (19.1.2015).')
@@ -200,7 +200,7 @@ def parse_first(content: str):
     return authors, rest
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_title(rest: str) -> tuple:
     rest = rest.strip()
     if rest.find('.') > REST_TITLE_START_MIN:
@@ -212,7 +212,7 @@ def parse_title(rest: str) -> tuple:
     return None
 
 
-@utila.cacheme
+@utilo.cacheme
 def parse_publisher(rest: str):
     if not rest:
         return None

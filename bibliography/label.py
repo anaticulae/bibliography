@@ -29,7 +29,7 @@ Number:
 import contextlib
 
 import iamraw
-import utila
+import utilo
 
 # [ ]{0,3} Optional whitespaces
 
@@ -45,7 +45,7 @@ PAGES = r"""
 
 
 def extract_pages(match):
-    raw = utila.extract_match(match)
+    raw = utilo.extract_match(match)
     page, pageend = None, None
     if match['page']:
         page, pageraw = parse_single(match['page'])  # pylint:disable=W0612
@@ -96,11 +96,11 @@ TECHNICAL_SPECIAL = r"""
 """ % (AUTHOR, PAGES)
 
 
-@utila.cacheme
+@utilo.cacheme
 def parses(content: str) -> iamraw.BibliographyReferences:
     result = []
     for pattern in (TECHNICAL_SPECIAL, TECHNICAL):
-        for item in utila.finditer(pattern, content):
+        for item in utilo.finditer(pattern, content):
             page, pageend, raw = extract_pages(item)
             techref, plus, year = extract_author(item)
             reference = iamraw.BibliographyReference(
@@ -129,10 +129,10 @@ NUMBER = r"""
 """ % PAGES
 
 
-@utila.cacheme
+@utilo.cacheme
 def numbers(content: str) -> iamraw.BibliographyReferences:
     result = []
-    for item in utila.finditer(NUMBER, content):
+    for item in utilo.finditer(NUMBER, content):
         page, pageend, raw = extract_pages(item)
         number = str(item['number'])
         reference = iamraw.BibliographyReference(
@@ -146,7 +146,7 @@ def numbers(content: str) -> iamraw.BibliographyReferences:
 
 
 def parse_single(page: str):
-    number = utila.parse_ints(page)[0]
+    number = utilo.parse_ints(page)[0]
     follow = page.replace(str(number), '').strip()
     return number, follow
 

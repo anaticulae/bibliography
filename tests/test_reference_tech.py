@@ -9,7 +9,7 @@
 
 import iamraw
 import pytest
-import utila
+import utilo
 
 import bibliography.label
 import bibliography.reference.tech
@@ -54,7 +54,7 @@ EXPECTED = """\
 def test_parse_tech():
     extracted = bibliography.label.parses(CONTENT)
     assert len(extracted) == len(EXPECTED.splitlines())
-    current = utila.NEWLINE.join((item.raw for item in extracted))
+    current = utilo.NEWLINE.join((item.raw for item in extracted))
     assert current == EXPECTED.strip()
 
 

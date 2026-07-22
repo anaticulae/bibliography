@@ -7,16 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 import serializeraw
-import utilatest
+import utilotest
 
 import tests
 
 
-@utilatest.requires(power.BACHELOR037_PDF)
+@utilotest.requires(hoverpower.BACHELOR037_PDF)
 def test_bib_headline_bachelor037(td, mp):
-    source = power.link(power.BACHELOR037_PDF)
+    source = hoverpower.link(hoverpower.BACHELOR037_PDF)
     cmd = f'-i {source} -o {td.tmpdir} --pages=33'
     tests.run(cmd, mp=mp)
     table = serializeraw.load_bibliography_reference(content=td.tmpdir)

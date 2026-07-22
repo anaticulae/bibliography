@@ -10,16 +10,16 @@
 =========
 """
 
-import utila
+import utilo
 
-YEARS = utila.compiles(r"""
+YEARS = utilo.compiles(r"""
     (?P<year>
         (19|20)\d{2}
     )
 """)
 
 
-@utila.cacheme
+@utilo.cacheme
 def years(raw: str):
     """\
     >>> years('IEEE Joint, 2004, S. 113–117')

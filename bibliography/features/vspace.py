@@ -9,7 +9,7 @@
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import bibliography.layout.vspace
 import bibliography.utils
@@ -33,15 +33,15 @@ def work(  # pylint:disable=R0914
             pages=selected,
         )
         vspace = bibliography.layout.vspace.extracts(textnavigators)
-        utila.debug(f'vspace:        {bibliography.utils.count(vspace)}')
+        utilo.debug(f'vspace:        {bibliography.utils.count(vspace)}')
         vspace = bibliography.judge.judge(vspace)
-        utila.debug(f'vspace judged: {bibliography.utils.count(vspace)}')
+        utilo.debug(f'vspace judged: {bibliography.utils.count(vspace)}')
         parts.append(vspace)
     # select best bib ref
-    best = utila.longest(parts)
+    best = utilo.longest(parts)
     # remove None items
-    without_empty = [utila.notnone(page) for page in best]
-    references = utila.flat(without_empty)
+    without_empty = [utilo.notnone(page) for page in best]
+    references = utilo.flat(without_empty)
     headline, pdfpages = None, None
     if references:
         pdfpages = tuple(sorted({item.raw_pdfpage for item in references}))

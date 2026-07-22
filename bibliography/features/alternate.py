@@ -9,7 +9,7 @@
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import bibliography.judge
 import bibliography.layout.alternate
@@ -34,15 +34,15 @@ def work(  # pylint:disable=R0914
             pages=selected,
         )
         alternate = bibliography.layout.alternate.extracts(textnavigators)
-        utila.debug(f'alternate:        {bibliography.utils.count(alternate)}')
+        utilo.debug(f'alternate:        {bibliography.utils.count(alternate)}')
         alternate = bibliography.judge.judge(alternate)
-        utila.debug(f'alternate judged: {bibliography.utils.count(alternate)}')
+        utilo.debug(f'alternate judged: {bibliography.utils.count(alternate)}')
         parts.append(alternate)
     # select best bib ref
-    best = utila.longest(parts)
+    best = utilo.longest(parts)
     # remove None items
-    without_empty = [utila.notnone(page) for page in best]
-    references = utila.flat(without_empty)
+    without_empty = [utilo.notnone(page) for page in best]
+    references = utilo.flat(without_empty)
     headline, pdfpages = None, None
     if references:
         pdfpages = tuple(sorted({item.raw_pdfpage for item in references}))

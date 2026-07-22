@@ -8,7 +8,7 @@
 # =============================================================================
 
 import pattern
-import utila
+import utilo
 
 
 class Titles(pattern.PatternMixin):
@@ -19,7 +19,7 @@ class Titles(pattern.PatternMixin):
         super().__init__('title')
 
     def __call__(self, text):
-        indexs = utila.findindexs(text, Titles.QUOTATIONS)
+        indexs = utilo.findindexs(text, Titles.QUOTATIONS)
         if not indexs:
             return []
         start, stop = min(indexs), max(indexs)
