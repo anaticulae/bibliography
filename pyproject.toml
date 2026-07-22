@@ -1,0 +1,113 @@
+[build-system]
+requires = [
+    "setuptools>=83.0.0",
+    "wheel>=0.47.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bibliography"
+version = "0.3.3"
+description = ""
+requires-python = ">=3.12"
+authors = [
+    { name = "Helmut Konrad Schewe", email = "helmutus@outlook.com" },
+]
+dependencies = [
+"utilo>=2.99.2,<3.0.0",
+
+"iamraw>=4.88.11,<5.0.0",
+"geostrat>=1.4.4,<2.0.0",
+
+"germania>=1.28.0,<2.0.0",
+"configos>=0.25.3,<1.0.0",
+"elementae>=0.21.7,<1.0.0",
+
+# "pattern>=0.4.1<1.0.0",
+
+"picture>=0.2.2,<1.0.0",
+"sdata>=0.7.4,<1.0.0",
+
+"ughost>=0.9.1,<1.0.0",
+
+]
+keywords = []
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+
+[project.readme]
+file = "README"
+content-type = "text/markdown"
+
+[project.optional-dependencies]
+dev = [
+"utilotest==0.26.0",
+"rawmaker==2.40.2",
+"hoverpower==2.20.1",
+"gennex==0.37.1",
+
+]
+
+[project.urls]
+Homepage = "https://github.com/anaticulae/bibliography"
+Repository = "https://github.com/anaticulae/bibliography"
+
+[project.scripts]
+bibliography = "bibliography.cli:main"
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:project.version",
+]
+
+[tool.semantic_release.changelog]
+mode = "init"
+output_format = "md"
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG"
+
+[tool.semantic_release.commit_parser_options]
+patch_tags = [
+    "fix",
+    "perf",
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "style",
+    "refactor",
+    "test",
+    "deps",
+]
+
+[tool.setuptools.packages.find]
+where = [
+    ".",
+]
+include = [
+        'bibliography',
+    'bibliography.features',
+    'bibliography.layout',
+    'bibliography.machine',
+    'bibliography.reference',
+]
+exclude = [
+    "tests*",
+]
+
+[tool.hoverpower]
+packages = [
+    "BACHELOR",
+    "BOOK",
+    "DISS",
+    "MASTER",
+    "ORDER",
+]
