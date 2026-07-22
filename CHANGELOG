@@ -1,93 +1,325 @@
-# Changelog
+# CHANGELOG
 
-Every noteable change is logged here.
 
-## v0.3.3 (2023-01-04)
+## v1.0.0 (2026-07-22)
+
+### Chores
+
+- **github**: Add .github
+  ([`3f21ead`](https://github.com/anaticulae/bibliography/commit/3f21eadc81554e057196ee315115079983218a6d))
+
+- **pyproject**: Add modern layout
+  ([`98e37db`](https://github.com/anaticulae/bibliography/commit/98e37dbe6bb1d65bee1175794e552e813d64717a))
+
+- **pyproject**: Add pattern library
+  ([`a745f09`](https://github.com/anaticulae/bibliography/commit/a745f090e53d2a181b5248e3b07dc44611617000))
+
+- **pyproject**: Adjust project name
+  ([`8dfd5c9`](https://github.com/anaticulae/bibliography/commit/8dfd5c9edaa92758c8ee1d2d56ee0905c1a43301))
+
+- **pyproject**: Release on every commit
+  ([`ecf1f8c`](https://github.com/anaticulae/bibliography/commit/ecf1f8ca63dbfba15a2ae2455060b1b96b5b9780))
+
+- **pyproject**: Remove outdated files
+  ([`2c6c551`](https://github.com/anaticulae/bibliography/commit/2c6c551bb09674714ff9466497c2df7b8abb2d5f))
+
+- **pyproject**: Remove outdated files
+  ([`5b796a3`](https://github.com/anaticulae/bibliography/commit/5b796a3267f41234db4b792b1540df1ec3b3b5b2))
+
+- **pyproject**: Use dynamic version
+  ([`16399aa`](https://github.com/anaticulae/bibliography/commit/16399aa6786041d8d4cbda03f2c9cbeaad141109))
+
+- **requirements**: Upgrade pyproject.toml
+  ([`d0545b1`](https://github.com/anaticulae/bibliography/commit/d0545b1c74b0b9ee0d7b193d273277f705c12988))
+
+### Code Style
+
+- **pyproject**: Format code
+  ([`4823643`](https://github.com/anaticulae/bibliography/commit/48236430add963148a9ba0f642c06c7f52029dba))
 
 ### Documentation
 
-* happy New Year! (ef32ed42ee68)
+- **readme**: Adjust file names
+  ([`0034a42`](https://github.com/anaticulae/bibliography/commit/0034a42215f5742cdf544dff47e90090c70a1575))
 
-### Chore
+### Refactoring
 
-* upgrade requirements.txt (cd423d794e50)
-* upgrade Jenkinsfile (1786ee0cb28f)
-* upgrade pipe library (055d961f5d8f)
+- **linter**: Solve linter warnings
+  ([`98f2b1b`](https://github.com/anaticulae/bibliography/commit/98f2b1bbe4159924422e756cb98827fd1382393a))
+
+- **rename**: Adjust package names
+  ([`2d29ff5`](https://github.com/anaticulae/bibliography/commit/2d29ff5f228e050135100e5bc6633344efe8c0a2))
+
+
+## v0.3.3 (2023-01-04)
+
+### Chores
+
+- **Jenkins**: Upgrade Jenkinsfile
+  ([`1786ee0`](https://github.com/anaticulae/bibliography/commit/1786ee0cb28f66589446604ea380ff460c819849))
+
+- **Jenkins**: Upgrade pipe library
+  ([`055d961`](https://github.com/anaticulae/bibliography/commit/055d961f5d8f034ec5855061540673262142e2dd))
+
+- **requirements**: Upgrade requirements.txt
+  ([`cd423d7`](https://github.com/anaticulae/bibliography/commit/cd423d794e501b77aa74d94bfdbd372506645fd7))
+
+### Documentation
+
+- **copyright**: Happy New Year!
+  ([`ef32ed4`](https://github.com/anaticulae/bibliography/commit/ef32ed42ee6818a25499bcbcf0d27ab613572179))
+
 
 ## v0.3.2 (2022-12-21)
 
-### Chore
+### Chores
 
-* use quick installer (7d240a7602fd)
-* upgrade requirements.txt (a87f7d43157a)
-* upgrade pipeline (3fcc93273424)
+- **Jenkins**: Upgrade pipeline
+  ([`3fcc932`](https://github.com/anaticulae/bibliography/commit/3fcc932734246881d18c49d1a95d52a75bc45728))
+
+- **requirements**: Upgrade requirements.txt
+  ([`a87f7d4`](https://github.com/anaticulae/bibliography/commit/a87f7d43157a1dac06371656dbfb6391361f5790))
+
+- **setup**: Use quick installer
+  ([`7d240a7`](https://github.com/anaticulae/bibliography/commit/7d240a7602fdb402519d5da8b22c2aaa4239f213))
+
 
 ## v0.3.1 (2022-12-04)
 
-### Chore
+### Chores
 
-* remove bibliography dependency (59d2ece3be9e)
-* use quick installer (6ae88e153cd6)
-* upgrade requirements.txt (5d8453eeba64)
-* upgrade pipeline (7cf13ad8e2cd)
-* add pipe library (7be0b4d5caf7)
+- **Jenkins**: Add pipe library
+  ([`7be0b4d`](https://github.com/anaticulae/bibliography/commit/7be0b4d5caf7b2cd870a2803865450a55c73c8d8))
+
+- **Jenkins**: Upgrade pipeline
+  ([`7cf13ad`](https://github.com/anaticulae/bibliography/commit/7cf13ad8e2cdc6223cd215af2166ed39ba7aeb67))
+
+- **requirements**: Upgrade requirements.txt
+  ([`5d8453e`](https://github.com/anaticulae/bibliography/commit/5d8453eeba64a4c4a816b31a6fc2ba771b43d774))
+
+- **setup**: Use quick installer
+  ([`6ae88e1`](https://github.com/anaticulae/bibliography/commit/6ae88e153cd66456eb11673a664a2219480ad3bb))
+
+- **test**: Remove bibliography dependency
+  ([`59d2ece`](https://github.com/anaticulae/bibliography/commit/59d2ece3be9e5f0e921efd7ec7df41d1d7e0724d))
+
+### Refactoring
+
+- **linter**: Solve linter warning
+  ([`1b0314e`](https://github.com/anaticulae/bibliography/commit/1b0314e6ed8ebdd0138792ff1b194f3984c1d76e))
+
+- **replace**: Automated replacement
+  ([`0b8510b`](https://github.com/anaticulae/bibliography/commit/0b8510b800546ccd34ca05661507772d93ef7d45))
+
 
 ## v0.3.0 (2022-09-30)
 
-### Feature
+### Chores
 
-* use new data (bd315c6f8cf7)
-* shrink year (85ce68be0eeb)
+- **ci**: Add Jenkinsfile
+  ([`0e09c32`](https://github.com/anaticulae/bibliography/commit/0e09c328df3ce550e7f9bc0b2b9ad1e6e97c534f))
 
-### Chore
+- **ci**: Increase worker count on CI
+  ([`ade2ffc`](https://github.com/anaticulae/bibliography/commit/ade2ffc5132a17d2777d29383abebd57b6f8801f))
 
-* archive generated data if build fails (917d09d86d4e)
-* use modern resource generator (dc185420918a)
-* increase worker count on CI (ade2ffc5132a)
-* remove defaults (7efd2ba050b0)
-* add Jenkinsfile (0e09c328df3c)
-* upgrade requirements.txt (f909c2b53106)
+- **Jenkinsfile**: Archive generated data if build fails
+  ([`917d09d`](https://github.com/anaticulae/bibliography/commit/917d09d86d4e60159680345ef543f6437a70ea77))
 
-## v0.2.3
+- **requirements**: Upgrade requirements.txt
+  ([`f909c2b`](https://github.com/anaticulae/bibliography/commit/f909c2b531064ddb4c15a2adc18c9ff6140fbaae))
 
-### Feature
+- **resources**: Remove defaults
+  ([`7efd2ba`](https://github.com/anaticulae/bibliography/commit/7efd2ba050b0a4164cfcad6147ebc6a7b979bb1c))
 
-* add legacy step to change to new data structure (0ed4c3b06293)
+- **resources**: Use modern resource generator
+  ([`dc18542`](https://github.com/anaticulae/bibliography/commit/dc185420918a7a7d2304c44fa5c100028ea83d68))
 
-## v0.2.2
+### Code Style
 
-### Feature
+- **changelog**: Adjust to automation tool
+  ([`0b1e728`](https://github.com/anaticulae/bibliography/commit/0b1e7280942e440ca6f2ae31288f89a51417fa9e))
 
-* improve tech parser (d1fbc60dd1cd)
-* improve regex lookup (346e36c3cc82)
+### Features
 
-### Fix
+- **cli**: Use new data
+  ([`bd315c6`](https://github.com/anaticulae/bibliography/commit/bd315c6f8cf7314b537725d485b390b1ea3d22a8))
 
-* add missing import (36b55662f0ef)
+- **year**: Shrink year
+  ([`85ce68b`](https://github.com/anaticulae/bibliography/commit/85ce68be0eebc50f22aea53a2785de0351df135b))
 
-## v0.2.1
+### Testing
 
-### Feature
+- **expected**: Adjust test after upgrading
+  ([`f58d329`](https://github.com/anaticulae/bibliography/commit/f58d3292e7ba754216c40cf05bcec82b34ba203d))
 
-* replace with real holy value (eaf16f764980)
+- **refactor**: Use fixture shortcuts
+  ([`9b4119c`](https://github.com/anaticulae/bibliography/commit/9b4119cecc64e54d7170a9d1f13adf5c6fab79fd))
 
-## v0.2.0
+- **skip**: Skip test if data is not generated
+  ([`e092f6a`](https://github.com/anaticulae/bibliography/commit/e092f6a459eaacaffb33d5adb83c751d70429251))
 
-### Feature
 
-* use separate step results (c75e385e52ed)
-* move alternate and vspace into separate step (98120fef94a9)
-* move strategy to separate step (590fe2c63dd3)
+## v0.2.3 (2022-06-17)
 
-## v0.1.0
+### Chores
 
-### Feature
+- **requirements**: Upgrade requirements.txt
+  ([`74ed75b`](https://github.com/anaticulae/bibliography/commit/74ed75b3aafd7d681b56ed2759caa1e11d9793ab))
 
-* add cli application (1b20679b57fd)
-* move code from detector (a5a508c1dc78)
+### Features
 
-### Fix
+- **cli**: Add legacy step to change to new data structure
+  ([`0ed4c3b`](https://github.com/anaticulae/bibliography/commit/0ed4c3b062936399536efa55fd47e6e744193adb))
 
-* add hack to pass behavior without generated newlines (0d65f3ca3a4c)
 
-## v0.0.0 Initial release
+## v0.2.2 (2022-06-15)
+
+### Bug Fixes
+
+- **alternate**: Add missing import
+  ([`36b5566`](https://github.com/anaticulae/bibliography/commit/36b55662f0eff5c89eb2cd4f92173c1ec2d86969))
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`ca25444`](https://github.com/anaticulae/bibliography/commit/ca25444706e024cb02dab37f039374235ab7734a))
+
+### Features
+
+- **reference**: Improve regex lookup
+  ([`346e36c`](https://github.com/anaticulae/bibliography/commit/346e36c3cc825553e381795f8bf3b5785170785f))
+
+- **tech**: Improve tech parser
+  ([`d1fbc60`](https://github.com/anaticulae/bibliography/commit/d1fbc60dd1cd3ebb8b14dfe826dc6d5165272f1a))
+
+
+## v0.2.1 (2022-06-08)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`2da68a2`](https://github.com/anaticulae/bibliography/commit/2da68a2b3f3e1e264e2906227f9315970c0537bb))
+
+### Features
+
+- **tech**: Replace with real holy value
+  ([`eaf16f7`](https://github.com/anaticulae/bibliography/commit/eaf16f7649803b58bd2d053bca201df478ff0503))
+
+### Refactoring
+
+- **alternate**: Replace with utila code
+  ([`ab0864b`](https://github.com/anaticulae/bibliography/commit/ab0864b98b888651ce76d92c929579c793801938))
+
+- **cache**: Replace with utila code
+  ([`eb8dabd`](https://github.com/anaticulae/bibliography/commit/eb8dabdd3710ee5357e7e2f6ab85bd0fd4b92470))
+
+- **freeand**: Clarify naming
+  ([`412cadc`](https://github.com/anaticulae/bibliography/commit/412cadca70d6ac0798615aae2b7da87365531ad1))
+
+- **freeand**: Compile pattern
+  ([`aae5031`](https://github.com/anaticulae/bibliography/commit/aae5031918be3fe6e13e246fc85147a1fdfb5ecb))
+
+- **freeand**: Convert to read holy value
+  ([`e37529f`](https://github.com/anaticulae/bibliography/commit/e37529f79a7e828e4c9ddeb7634892cee67e6222))
+
+- **magic**: Compile pattern
+  ([`7af704c`](https://github.com/anaticulae/bibliography/commit/7af704c1093411765353cfb34da162efde5d40f6))
+
+- **magic**: Convert into const
+  ([`32ccae7`](https://github.com/anaticulae/bibliography/commit/32ccae7fe701a15d5726ee5774926f3bc75ae5a5))
+
+- **number**: Reduce complexity
+  ([`1256742`](https://github.com/anaticulae/bibliography/commit/1256742e17b016813100e9b23a5702e41a4e5102))
+
+- **number**: Replace with utila code
+  ([`02cef4b`](https://github.com/anaticulae/bibliography/commit/02cef4b8799e1b0ab0fac41123ae0ca5d7ab7e4d))
+
+- **reference**: Replace with utila code
+  ([`75e8316`](https://github.com/anaticulae/bibliography/commit/75e831605a82c175e2c4a744ce12bde12aab79a4))
+
+- **regex**: Replace with utila code
+  ([`8b6350c`](https://github.com/anaticulae/bibliography/commit/8b6350c42292d96f55e91a99b9c0fda4316afd14))
+
+- **tech**: Replace with utila code
+  ([`8aef3c1`](https://github.com/anaticulae/bibliography/commit/8aef3c1640259ca1595eb8095e1d44dbdc1d3091))
+
+- **vspace**: Replace with utila code
+  ([`f65e14c`](https://github.com/anaticulae/bibliography/commit/f65e14c5502c1718add293aaf1edb1fb88eed7f1))
+
+- **vspace**: Replace with utila code
+  ([`6e1bf74`](https://github.com/anaticulae/bibliography/commit/6e1bf74f513ef96be865fc3b2aee406aaac9c3d0))
+
+### Testing
+
+- **refactor**: Shorten naming
+  ([`7cf4145`](https://github.com/anaticulae/bibliography/commit/7cf414590d410cb86d7e0c00d3e1393e5eba667e))
+
+- **refactor**: Simplify test
+  ([`64d01de`](https://github.com/anaticulae/bibliography/commit/64d01de2031fa5fe225c159ceed2ccc8f5028124))
+
+
+## v0.2.0 (2022-06-06)
+
+### Features
+
+- **cli**: Use separate step results
+  ([`c75e385`](https://github.com/anaticulae/bibliography/commit/c75e385e52ed5354570be0a115de3fcd42ac9275))
+
+- **column**: Move strategy to separate step
+  ([`590fe2c`](https://github.com/anaticulae/bibliography/commit/590fe2c63dd375dab893116a7c185f2fa27282b7))
+
+- **move**: Move alternate and vspace into separate step
+  ([`98120fe`](https://github.com/anaticulae/bibliography/commit/98120fef94a92bc25ddc8d2c9a0cab476e6e6423))
+
+### Refactoring
+
+- **bib**: Move utils methods
+  ([`7745b6a`](https://github.com/anaticulae/bibliography/commit/7745b6a90d39c74de9e69f0e0d512480a56ad7af))
+
+- **configo**: Remove default behavior
+  ([`749050b`](https://github.com/anaticulae/bibliography/commit/749050b9044c4ff863fc54939b538c824bff2941))
+
+- **rename**: Adjust test file names
+  ([`8918c25`](https://github.com/anaticulae/bibliography/commit/8918c25caef9fbd9327166cbf6e031bf23f301b7))
+
+### Testing
+
+- **headline**: Move test to separate file
+  ([`02acaed`](https://github.com/anaticulae/bibliography/commit/02acaedfe0e11ef04124aa8c70bfefa450025db0))
+
+- **rename**: Clarify test name
+  ([`de38ec3`](https://github.com/anaticulae/bibliography/commit/de38ec3b6006e1330fc8852d9dc9325a14f0b6fd))
+
+
+## v0.1.0 (2022-06-06)
+
+### Bug Fixes
+
+- **alternate**: Add hack to pass behavior without generated newlines
+  ([`0d65f3c`](https://github.com/anaticulae/bibliography/commit/0d65f3ca3a4cb1de6334ae4edf2f4d4df360c12e))
+
+### Chores
+
+- **requirements**: Add utila
+  ([`773c8a3`](https://github.com/anaticulae/bibliography/commit/773c8a35e9d1ed82f7a4fa4f823cb2f2bd1f0be5))
+
+- **requirements**: Move requirements
+  ([`224a9d3`](https://github.com/anaticulae/bibliography/commit/224a9d3fb41f2e6350febd34c69e1b8c6ae4fd0d))
+
+### Features
+
+- **cli**: Add cli application
+  ([`1b20679`](https://github.com/anaticulae/bibliography/commit/1b20679b57fd7c8d126d1c163669186936022d57))
+
+- **move**: Move code from detector
+  ([`a5a508c`](https://github.com/anaticulae/bibliography/commit/a5a508c1dc78036ff34274a2988aff0b2c89e22d))
+
+### Testing
+
+- **move**: Move tests from detector
+  ([`9c48c16`](https://github.com/anaticulae/bibliography/commit/9c48c1614cf7fff19ffdd4ff2c5a059b81f054cb))
+
+
+## v0.0.0 (2022-06-05)
+
+- Initial Release
