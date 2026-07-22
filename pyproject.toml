@@ -14,22 +14,14 @@ authors = [
     { name = "Helmut Konrad Schewe", email = "helmutus@outlook.com" },
 ]
 dependencies = [
-"utilo>=2.99.2,<3.0.0",
-
-"iamraw>=4.88.11,<5.0.0",
-"geostrat>=1.4.4,<2.0.0",
-
-"germania>=1.28.0,<2.0.0",
-"configos>=0.25.3,<1.0.0",
-"elementae>=0.21.7,<1.0.0",
-
-# "pattern>=0.4.1<1.0.0",
-
-"picture>=0.2.2,<1.0.0",
-"sdata>=0.7.4,<1.0.0",
-
-"ughost>=0.9.1,<1.0.0",
-
+    "configos>=0.25.3,<1.0.0",
+    "elementae>=0.21.7,<1.0.0",
+    "geostrat>=1.4.4,<2.0.0",
+    "germania>=1.28.0,<2.0.0",
+    "iamraw>=4.88.11,<5.0.0",
+    "pictura>=1.0.0,<2.0.0",
+    "ughost>=0.9.1,<1.0.0",
+    "utilo>=2.99.2,<3.0.0",
 ]
 keywords = []
 classifiers = [
@@ -48,11 +40,10 @@ content-type = "text/markdown"
 
 [project.optional-dependencies]
 dev = [
-"utilotest==0.26.0",
-"rawmaker==2.40.2",
-"hoverpower==2.20.1",
-"gennex==0.37.1",
-
+    "gennex==1.0.3",
+    "hoverpower==1.5.2",
+    "rawmaker==2.40.5",
+    "utilotest==1.0.4",
 ]
 
 [project.urls]
@@ -93,11 +84,11 @@ where = [
     ".",
 ]
 include = [
-        'bibliography',
-    'bibliography.features',
-    'bibliography.layout',
-    'bibliography.machine',
-    'bibliography.reference',
+    "bibliography",
+    "bibliography.features",
+    "bibliography.layout",
+    "bibliography.machine",
+    "bibliography.reference",
 ]
 exclude = [
     "tests*",
