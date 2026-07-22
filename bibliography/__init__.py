@@ -7,9 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
+import importlib.metadata
 import os
 
-__version__ = '0.3.3'
-
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+PROJECT = 'bibliography'
 PROCESS = 'bibliography'
+__version__ = importlib.metadata.version(PROJECT)
