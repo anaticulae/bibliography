@@ -18,7 +18,7 @@ import bibliography.layout.column
 @utilotest.requires(hoverpower.BACHELOR063_PDF)
 def test_parse_bibliography_bachelor63_page59():
     """Latex double column. Left side with [Hem10] pattern"""
-    pages = (59)
+    pages = (59,)
     navigators = serializeraw.ptn_frompath(
         hoverpower.link(hoverpower.BACHELOR063_PDF),
         # fill_empty=False,

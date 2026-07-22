@@ -240,7 +240,7 @@ def select_authors(matched):
 
 @utilo.cacheme
 def parse_longtext_less_strict(content: str) -> iamraw.BibliographyReference:
-    for pattern in [NORMAL, BROKEN_BRACKETS]:
+    for pattern in (NORMAL, BROKEN_BRACKETS):
         parsed = parse_longtext(content, pattern=pattern)
         if not parsed:
             continue

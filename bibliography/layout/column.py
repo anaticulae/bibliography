@@ -12,13 +12,12 @@ import iamraw
 import texmex
 import utilo
 
-import bibliography.layout.utils
 import bibliography.layout.vspace
 import bibliography.machine.runtime
 
 
 def extracts(navigators: texmex.PTNs):
-    for strategy in [extract, double_column]:
+    for strategy in (extract, double_column):
         result = []
         for navigator in navigators:
             extracted = strategy(navigator)

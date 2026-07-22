@@ -42,8 +42,8 @@ ERROR_LEVEL_MAX = configos.HV_PERCENT_PLUS(default=25.0)
 def extracts(items: texmex.PTNs) -> iamraw.BibliographyReferences:
     result = []
     config = geostrat.ParserConfig(
-        min_content_length=CONTENT_LENGTH_MIN,
-        min_word_count=WORD_COUNT_MIN,
+        content_length_min=CONTENT_LENGTH_MIN,
+        word_count_min=WORD_COUNT_MIN,
     )
     try:
         parsed = geostrat.al_parse_pages(items, config=config)
@@ -126,7 +126,7 @@ def parse_last(raw: str) -> iamraw.BibliographyReference:
     year = bibliography.reference.years(raw)
     if year:
         raw = raw.replace(year[0], '')
-        year = year[1]
+        year: int = year[1]
     try:
         title, rest = raw.split('-')  # pylint:disable=W0612
     except ValueError:

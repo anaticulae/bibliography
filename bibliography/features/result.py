@@ -26,10 +26,10 @@ def work(
     count_vspace = len(vspace.references) * 0.5
 
     count_best, best = count_column, column
-    for value, selected in [
+    for value, selected in (
         (count_alternate, alternate),
         (count_vspace, vspace),
-    ]:
+    ):
         if value < count_best:
             continue
         count_best = value
