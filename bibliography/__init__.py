@@ -11,6 +11,6 @@ import importlib.metadata
 import os
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PROJECT = 'bibliography'
+PROJECT = 'bibliographia'
 PROCESS = 'bibliography'
 __version__ = importlib.metadata.version(PROJECT)
