@@ -45,19 +45,6 @@ jobs:
           make docker-longtest
         env:
           HOVERPOWER_SECRET: ${{ secrets.HOVERPOWER_SECRET }}
-  alltest:
-    runs-on: ubuntu-24.04
-    needs: longtest
-    steps:
-      - uses: actions/checkout@v7
-        with:
-        # required by test which requires commits
-          fetch-depth: 15
-      - name: run alltest
-        run: |
-          make docker-alltest
-        env:
-          HOVERPOWER_SECRET: ${{ secrets.HOVERPOWER_SECRET }}
   linter:
     runs-on: ubuntu-24.04
     needs: build

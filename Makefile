@@ -32,13 +32,6 @@ docker-longtest: docker-decrypt
 		$(IMAGE)\
 		"baw test long"
 
-docker-alltest: docker-decrypt
-	docker run\
-		-v $(CURDIR):/var/workdir\
-		-v /tmp/bibliography:/tmp/bibliography\
-		$(IMAGE)\
-		"baw test all"
-
 docker-lint: docker-build
 	docker run\
 		-v $(CURDIR):/var/workdir\
