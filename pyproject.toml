@@ -43,6 +43,9 @@ content-type = "text/markdown"
 dev = [
     "gennex==1.0.3",
     "hoverpower==1.5.2",
+    "ibidem==1.0.2",
+    "mundare==1.0.2",
+    "pagenumber==1.0.0",
     "rawmaker==2.40.5",
     "utilotest==1.0.4",
 ]
