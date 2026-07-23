@@ -1,6 +1,25 @@
 # CHANGELOG
 
 
+## v1.0.1 (2026-07-23)
+
+### Chores
+
+- **pyproject**: Add missing cleanup, pagenumber, ibidem
+  ([`be12001`](https://github.com/anaticulae/bibliography/commit/be12001cd63d61ee47f8ececb8f435e5f0474184))
+
+- **test**: Add missing secret
+  ([`2b29c58`](https://github.com/anaticulae/bibliography/commit/2b29c58018e495e0bccf4e4ef338e16476b2225f))
+
+- **test**: Remove unused test step
+  ([`366b987`](https://github.com/anaticulae/bibliography/commit/366b98700222607e6f4669aa1f794a05bdff9229))
+
+### Testing
+
+- **reference**: Disable failing test
+  ([`1fe6bea`](https://github.com/anaticulae/bibliography/commit/1fe6bea08d3f12325ca8929ece36f2d456e5e7d8))
+
+
 ## v1.0.0 (2026-07-22)
 
 ### Chores
